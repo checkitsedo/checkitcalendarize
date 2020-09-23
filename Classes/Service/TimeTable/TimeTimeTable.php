@@ -5,12 +5,12 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Service\TimeTable;
+namespace Checkitsedo\Checkitcalendarize\Service\TimeTable;
 
-use HDNET\Calendarize\Domain\Model\Configuration;
-use HDNET\Calendarize\Service\RecurrenceService;
-use HDNET\Calendarize\Utility\ConfigurationUtility;
-use HDNET\Calendarize\Utility\DateTimeUtility;
+use Checkitsedo\Checkitcalendarize\Domain\Model\Configuration;
+use Checkitsedo\Checkitcalendarize\Service\RecurrenceService;
+use Checkitsedo\Checkitcalendarize\Utility\ConfigurationUtility;
+use Checkitsedo\Checkitcalendarize\Utility\DateTimeUtility;
 use TYPO3\CMS\Core\Messaging\FlashMessage;
 use TYPO3\CMS\Core\Messaging\FlashMessageService;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
@@ -149,12 +149,12 @@ class TimeTimeTable extends AbstractTimeTable
             $message = GeneralUtility::makeInstance(
                 FlashMessage::class,
                 LocalizationUtility::translate(
-                    'LLL:EXT:calendarize/Resources/Private/Language/locallang.xlf:wrong.date.message',
-                    'calendarize'
+                    'LLL:EXT:checkitcalendarize/Resources/Private/Language/locallang.xlf:wrong.date.message',
+                    'checkitcalendarize'
                 ),
                 LocalizationUtility::translate(
-                    'LLL:EXT:calendarize/Resources/Private/Language/locallang.xlf:wrong.date',
-                    'calendarize'
+                    'LLL:EXT:checkitcalendarize/Resources/Private/Language/locallang.xlf:wrong.date',
+                    'checkitcalendarize'
                 ),
                 FlashMessage::ERROR
             );
@@ -162,12 +162,12 @@ class TimeTimeTable extends AbstractTimeTable
             $message = GeneralUtility::makeInstance(
                 FlashMessage::class,
                 LocalizationUtility::translate(
-                    'LLL:EXT:calendarize/Resources/Private/Language/locallang.xlf:wrong.time.message',
-                    'calendarize'
+                    'LLL:EXT:checkitcalendarize/Resources/Private/Language/locallang.xlf:wrong.time.message',
+                    'checkitcalendarize'
                 ),
                 LocalizationUtility::translate(
-                    'LLL:EXT:calendarize/Resources/Private/Language/locallang.xlf:wrong.time',
-                    'calendarize'
+                    'LLL:EXT:checkitcalendarize/Resources/Private/Language/locallang.xlf:wrong.time',
+                    'checkitcalendarize'
                 ),
                 FlashMessage::ERROR
             );
