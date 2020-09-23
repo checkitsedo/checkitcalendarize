@@ -5,14 +5,14 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Slots;
+namespace Checkitsedo\Checkitcalendarize\Slots;
 
 use HDNET\Autoloader\Annotation\SignalClass;
 use HDNET\Autoloader\Annotation\SignalName;
-use HDNET\Calendarize\Domain\Model\PluginConfiguration;
-use HDNET\Calendarize\Domain\Repository\EventRepository;
-use HDNET\Calendarize\Register;
-use HDNET\Calendarize\Utility\HelperUtility;
+use Checkitsedo\Checkitcalendarize\Domain\Model\PluginConfiguration;
+use Checkitsedo\Checkitcalendarize\Domain\Repository\EventRepository;
+use Checkitsedo\Checkitcalendarize\Register;
+use Checkitsedo\Checkitcalendarize\Utility\HelperUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Utility\MathUtility;
 use TYPO3\CMS\Extbase\Object\ObjectManager;
@@ -25,7 +25,7 @@ class EventSearch
     /**
      * Check if we can reduce the amount of results.
      *
-     * @SignalClass \HDNET\Calendarize\Domain\Repository\IndexRepository
+     * @SignalClass \Checkitsedo\Checkitcalendarize\Domain\Repository\IndexRepository
      * @SignalName findBySearchPre
      *
      * @param array          $indexIds
@@ -52,7 +52,7 @@ class EventSearch
         }
 
         // @todo Filter here for $customSearch['categories'] and take also care of the fullText
-        // ?tx_calendarize_calendar[customSearch][categories]=1
+        // ?tx_checkitcalendarize_calendar[customSearch][categories]=1
         // https://github.com/lochmueller/calendarize/issues/89
 
         if (!isset($customSearch['fullText'])) {
@@ -75,7 +75,7 @@ class EventSearch
     /**
      * Set ids by general.
      *
-     * @SignalClass \HDNET\Calendarize\Domain\Repository\IndexRepository
+     * @SignalClass \Checkitsedo\Checkitcalendarize\Domain\Repository\IndexRepository
      * @SignalName getDefaultConstraints
      *
      * @param array $indexIds
