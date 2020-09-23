@@ -1,17 +1,17 @@
-plugin.tx_calendarize {
+plugin.tx_checkitcalendarize {
 	settings {
-		dateLimitBrowserPrev = {$plugin.tx_calendarize.settings.dateLimitBrowserPrev}
-		dateLimitBrowserNext = {$plugin.tx_calendarize.settings.dateLimitBrowserNext}
-		weekStart = {$plugin.tx_calendarize.settings.weekStart}
-		dateFormat = {$plugin.tx_calendarize.settings.dateFormat}
-		timeFormat = {$plugin.tx_calendarize.settings.timeFormat}
-		useMomentJsDateAndTimeOutput = {$plugin.tx_calendarize.settings.useMomentJsDateAndTimeOutput}
-		useMomentFullCalendarIo = {$plugin.tx_calendarize.settings.useMomentFullCalendarIo}
-		listStartTime = {$plugin.tx_calendarize.settings.listStartTime}
-		listStartTimeOffsetHours = {$plugin.tx_calendarize.settings.listStartTimeOffsetHours}
-		searchEndModifier = {$plugin.tx_calendarize.settings.searchEndModifier}
-    defaultDetailPid = {$plugin.tx_calendarize.settings.defaultDetailPid}
-    indexLanguageMode = {$plugin.tx_calendarize.settings.indexLanguageMode}
+		dateLimitBrowserPrev = {$plugin.tx_checkitcalendarize.settings.dateLimitBrowserPrev}
+		dateLimitBrowserNext = {$plugin.tx_checkitcalendarize.settings.dateLimitBrowserNext}
+		weekStart = {$plugin.tx_checkitcalendarize.settings.weekStart}
+		dateFormat = {$plugin.tx_checkitcalendarize.settings.dateFormat}
+		timeFormat = {$plugin.tx_checkitcalendarize.settings.timeFormat}
+		useMomentJsDateAndTimeOutput = {$plugin.tx_checkitcalendarize.settings.useMomentJsDateAndTimeOutput}
+		useMomentFullCalendarIo = {$plugin.tx_checkitcalendarize.settings.useMomentFullCalendarIo}
+		listStartTime = {$plugin.tx_checkitcalendarize.settings.listStartTime}
+		listStartTimeOffsetHours = {$plugin.tx_checkitcalendarize.settings.listStartTimeOffsetHours}
+		searchEndModifier = {$plugin.tx_checkitcalendarize.settings.searchEndModifier}
+    defaultDetailPid = {$plugin.tx_checkitcalendarize.settings.defaultDetailPid}
+    indexLanguageMode = {$plugin.tx_checkitcalendarize.settings.indexLanguageMode}
 
     paginateConfiguration {
       itemsPerPage = 10
@@ -22,10 +22,10 @@ plugin.tx_calendarize {
     }
 
 		feed {
-			title = {$plugin.tx_calendarize.settings.feed.title}
-			description = {$plugin.tx_calendarize.settings.feed.description}
-			language = {$plugin.tx_calendarize.settings.feed.language}
-			debugMode = {$plugin.tx_calendarize.settings.feed.debugMode}
+			title = {$plugin.tx_checkitcalendarize.settings.feed.title}
+			description = {$plugin.tx_checkitcalendarize.settings.feed.description}
+			language = {$plugin.tx_checkitcalendarize.settings.feed.language}
+			debugMode = {$plugin.tx_checkitcalendarize.settings.feed.debugMode}
 		}
 	}
 
@@ -33,23 +33,23 @@ plugin.tx_calendarize {
 
 	view {
 		templateRootPaths {
-			50 = EXT:calendarize/Resources/Private/Templates/
-			100 = {$plugin.tx_calendarize.view.templateRootPath}
+			50 = EXT:checkitcalendarize/Resources/Private/Templates/
+			100 = {$plugin.tx_checkitcalendarize.view.templateRootPath}
 		}
 
 		partialRootPaths {
-			50 = EXT:calendarize/Resources/Private/Partials/
-			100 = {$plugin.tx_calendarize.view.partialRootPath}
+			50 = EXT:checkitcalendarize/Resources/Private/Partials/
+			100 = {$plugin.tx_checkitcalendarize.view.partialRootPath}
 		}
 
 		layoutRootPaths {
-			50 = EXT:calendarize/Resources/Private/Layouts/
-			100 = {$plugin.tx_calendarize.view.layoutRootPath}
+			50 = EXT:checkitcalendarize/Resources/Private/Layouts/
+			100 = {$plugin.tx_checkitcalendarize.view.layoutRootPath}
 		}
 
 		widget {
 			TYPO3\CMS\Fluid\ViewHelpers\Widget\PaginateViewHelper {
-				templateRootPath = EXT:calendarize/Resources/Private/Templates/
+				templateRootPath = EXT:checkitcalendarize/Resources/Private/Templates/
 			}
 		}
 	}
@@ -59,17 +59,17 @@ plugin.tx_calendarize {
 	}
 }
 
-[globalVar = LIT:0<{$plugin.tx_calendarize.settings.useMomentJsDateAndTimeOutput}]
+[globalVar = LIT:0<{$plugin.tx_checkitcalendarize.settings.useMomentJsDateAndTimeOutput}]
 	page.includeJSFooterlibs.moment = https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment-with-locales.min.js
 	page.includeJSFooterlibs.moment.external = 1
 	page.includeJSFooterlibs.moment.disableCompression = 1
 	page.includeJSFooterlibs.momentTimezone = https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.31/moment-timezone.min.js
 	page.includeJSFooterlibs.momentTimezone.external = 1
 	page.includeJSFooterlibs.momentTimezone.disableCompression = 1
-	page.includeJSFooterlibs.momentReplacement = EXT:calendarize/Resources/Public/JavaScript/MomentReplacement.js
+	page.includeJSFooterlibs.momentReplacement = EXT:checkitcalendarize/Resources/Public/JavaScript/MomentReplacement.js
 [global]
 
-[globalVar = LIT:0<{$plugin.tx_calendarize.settings.useMomentFullCalendarIo}]
+[globalVar = LIT:0<{$plugin.tx_checkitcalendarize.settings.useMomentFullCalendarIo}]
 	page {
 		includeCSS {
 			fullCalendar = https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css
@@ -101,7 +101,7 @@ plugin.tx_calendarize {
 				disableCompression = 1
 				excludeFromConcatenation = 1
 			}
-			calendarizeFullCalendar = EXT:calendarize/Resources/Public/JavaScript/FullCalendar.js
+			calendarizeFullCalendar = EXT:checkitcalendarize/Resources/Public/JavaScript/FullCalendar.js
 			calendarizeFullCalendar {
 				excludeFromConcatenation = 1
 			}
@@ -110,32 +110,32 @@ plugin.tx_calendarize {
 [global]
 
 # Rendering of calendarize, displayed by "Insert Record" content element
-tt_content.shortcut.20.tables := addToList(tx_calendarize_domain_model_event)
-tt_content.shortcut.20.conf.tx_calendarize_domain_model_event = USER
-tt_content.shortcut.20.conf.tx_calendarize_domain_model_event {
+tt_content.shortcut.20.tables := addToList(tx_checkitcalendarize_domain_model_event)
+tt_content.shortcut.20.conf.tx_checkitcalendarize_domain_model_event = USER
+tt_content.shortcut.20.conf.tx_checkitcalendarize_domain_model_event {
   userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
-  extensionName = Calendarize
-  pluginName = Calendar
-  vendorName = HDNET
+  extensionName = Checkitcalendarize
+  pluginName = Checkitcalendar
+  vendorName = Checkitsedo
   switchableControllerActions {
-    Calendar {
+    Checkitcalendar {
       1 = shortcut
     }
   }
 
-  settings =< plugin.tx_calendarize.settings
+  settings =< plugin.tx_checkitcalendarize.settings
   settings {
     insertRecord = 1
     hidePagination = 1
-    detailPid = {$plugin.tx_calendarize.settings.defaultDetailPid}
+    detailPid = {$plugin.tx_checkitcalendarize.settings.defaultDetailPid}
   }
 }
 # For fluid_styled_content
-tt_content.shortcut.variables.shortcuts.tables := addToList(tx_calendarize_domain_model_event)
-tt_content.shortcut.variables.shortcuts.conf.tx_calendarize_domain_model_event =< tt_content.shortcut.20.conf.tx_calendarize_domain_model_event
+tt_content.shortcut.variables.shortcuts.tables := addToList(tx_checkitcalendarize_domain_model_event)
+tt_content.shortcut.variables.shortcuts.conf.tx_checkitcalendarize_domain_model_event =< tt_content.shortcut.20.conf.tx_checkitcalendarize_domain_model_event
 
-# Add you own tables with (See: EXT:calendarize/Configuration/TCA/Overrides/tt_content.php)
+# Add you own tables with (See: EXT:checkitcalendarize/Configuration/TCA/Overrides/tt_content.php)
 # tt_content.shortcut.20.tables := addToList(tx_XXXXXX_domain_model_event)
-# tt_content.shortcut.20.conf.tx_XXXXX_domain_model_event =< tt_content.shortcut.20.conf.tx_calendarize_domain_model_event
+# tt_content.shortcut.20.conf.tx_XXXXX_domain_model_event =< tt_content.shortcut.20.conf.tx_checkitcalendarize_domain_model_event
 # tt_content.shortcut.variables.shortcuts.tables := addToList(tx_XXXXX_domain_model_event)
-# tt_content.shortcut.variables.shortcuts.conf.tx_XXXXXX_domain_model_event =< tt_content.shortcut.20.conf.tx_calendarize_domain_model_event
+# tt_content.shortcut.variables.shortcuts.conf.tx_XXXXXX_domain_model_event =< tt_content.shortcut.20.conf.tx_checkitcalendarize_domain_model_event
