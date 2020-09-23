@@ -3,30 +3,30 @@
 	<file source-language="en" datatype="plaintext" original="messages" date="2016-04-11T14:06:26Z">
 		<header>
 			<type>database</type>
-			<description>Language file for EXT:calendarize</description>
+			<description>Language file for EXT:checkitcalendarize</description>
 			<authorName>Tim Lochmüller</authorName>
 			<authorEmail>tim@fruit-lab.de</authorEmail>
 			<generator>LFEditor</generator>
 		</header>
 		<body>
-			<trans-unit id="tx_calendarize_domain_model_index.open_end_time"><source>open_end_time</source></trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_configuration.open_end_time"><source>Open end?</source></trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_configuration.end_date_dynamic"><source>End date (dynamic)</source></trans-unit>
+			<trans-unit id="tx_checkitcalendarize_domain_model_index.open_end_time"><source>open_end_time</source></trans-unit>
+			<trans-unit id="tx_checkitcalendarize_domain_model_configuration.open_end_time"><source>Open end?</source></trans-unit>
+			<trans-unit id="tx_checkitcalendarize_domain_model_configuration.end_date_dynamic"><source>End date (dynamic)</source></trans-unit>
 			<trans-unit id="configuration.end_date_dynamic.1day"><source>1 day</source></trans-unit>
 			<trans-unit id="configuration.end_date_dynamic.1week"><source>1 week</source></trans-unit>
 			<trans-unit id="configuration.end_date_dynamic.end_week"><source>End of week</source></trans-unit>
 			<trans-unit id="configuration.end_date_dynamic.end_month"><source>End of month</source></trans-unit>
 			<trans-unit id="configuration.end_date_dynamic.end_year"><source>End of year</source></trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_event.organizer_link"><source>Organizer link</source></trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_event.location_link"><source>Location link</source></trans-unit>
+			<trans-unit id="tx_checkitcalendarize_domain_model_event.organizer_link"><source>Organizer link</source></trans-unit>
+			<trans-unit id="tx_checkitcalendarize_domain_model_event.location_link"><source>Location link</source></trans-unit>
 
 			<trans-unit id="canceled"><source>Canceled</source></trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_configuration.state"><source>State</source></trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_index.state"><source>State</source></trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_configurationgroup.import_id">
+			<trans-unit id="tx_checkitcalendarize_domain_model_configuration.state"><source>State</source></trans-unit>
+			<trans-unit id="tx_checkitcalendarize_domain_model_index.state"><source>State</source></trans-unit>
+			<trans-unit id="tx_checkitcalendarize_domain_model_configurationgroup.import_id">
 				<source>import_id</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_configuration.import_id">
+			<trans-unit id="tx_checkitcalendarize_domain_model_configuration.import_id">
 				<source>import_id</source>
 			</trans-unit>
 			<trans-unit id="sys_file_reference.import_id">
@@ -59,46 +59,46 @@
 				<source>Infinite</source>
 			</trans-unit>
 
-			<trans-unit id="tx_calendarize_domain_model_pluginconfiguration.model_name">
+			<trans-unit id="tx_checkitcalendarize_domain_model_pluginconfiguration.model_name">
 				<source>Model Name</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_pluginconfiguration.title">
+			<trans-unit id="tx_checkitcalendarize_domain_model_pluginconfiguration.title">
 				<source>Title</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_pluginconfiguration">
+			<trans-unit id="tx_checkitcalendarize_domain_model_pluginconfiguration">
 				<source><![CDATA[Plugin configuration]]></source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_pluginconfiguration.booking_pid">
+			<trans-unit id="tx_checkitcalendarize_domain_model_pluginconfiguration.booking_pid">
 				<source>Booking PID</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_pluginconfiguration.day_pid">
+			<trans-unit id="tx_checkitcalendarize_domain_model_pluginconfiguration.day_pid">
 				<source>Day PID</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_pluginconfiguration.week_pid">
+			<trans-unit id="tx_checkitcalendarize_domain_model_pluginconfiguration.week_pid">
 				<source>Week PID</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_pluginconfiguration.month_pid">
+			<trans-unit id="tx_checkitcalendarize_domain_model_pluginconfiguration.month_pid">
 				<source>Month PID</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_pluginconfiguration.year_pid">
+			<trans-unit id="tx_checkitcalendarize_domain_model_pluginconfiguration.year_pid">
 				<source>Year PID</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_pluginconfiguration.list_pid">
+			<trans-unit id="tx_checkitcalendarize_domain_model_pluginconfiguration.list_pid">
 				<source>List PID</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_pluginconfiguration.detail_pid">
+			<trans-unit id="tx_checkitcalendarize_domain_model_pluginconfiguration.detail_pid">
 				<source>Detail PID</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_pluginconfiguration.recursive">
+			<trans-unit id="tx_checkitcalendarize_domain_model_pluginconfiguration.recursive">
 				<source>Recursive</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_pluginconfiguration.storage_pid">
+			<trans-unit id="tx_checkitcalendarize_domain_model_pluginconfiguration.storage_pid">
 				<source>Storage PID</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_pluginconfiguration.configuration">
+			<trans-unit id="tx_checkitcalendarize_domain_model_pluginconfiguration.configuration">
 				<source>Configuration</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_configuration.handling">
+			<trans-unit id="tx_checkitcalendarize_domain_model_configuration.handling">
 				<source>Handling</source>
 			</trans-unit>
 			<trans-unit id="configuration.handling.include">
@@ -121,7 +121,7 @@
 			</trans-unit>
 
 
-			<trans-unit id="tx_calendarize_domain_model_event.organizer">
+			<trans-unit id="tx_checkitcalendarize_domain_model_event.organizer">
 				<source>Organizer</source>
 			</trans-unit>
 			<trans-unit id="all_day">
@@ -502,139 +502,139 @@
 			<trans-unit id="time">
 				<source>Time</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_caldav">
+			<trans-unit id="tx_checkitcalendarize_domain_model_caldav">
 				<source>CalDav configuration</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_caldav.event_storage">
+			<trans-unit id="tx_checkitcalendarize_domain_model_caldav.event_storage">
 				<source>Event Storage</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_caldav.title">
+			<trans-unit id="tx_checkitcalendarize_domain_model_caldav.title">
 				<source>Title</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_caldav.user_storage">
+			<trans-unit id="tx_checkitcalendarize_domain_model_caldav.user_storage">
 				<source>User Storage</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_configuration">
+			<trans-unit id="tx_checkitcalendarize_domain_model_configuration">
 				<source>Configuration</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_configuration.all_day">
+			<trans-unit id="tx_checkitcalendarize_domain_model_configuration.all_day">
 				<source>All day</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_configuration.amount">
+			<trans-unit id="tx_checkitcalendarize_domain_model_configuration.amount">
 				<source>Amount</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_configuration.counter_amount">
+			<trans-unit id="tx_checkitcalendarize_domain_model_configuration.counter_amount">
 				<source>Amount</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_configuration.counter_interval">
+			<trans-unit id="tx_checkitcalendarize_domain_model_configuration.counter_interval">
 				<source>Interval</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_configuration.day">
+			<trans-unit id="tx_checkitcalendarize_domain_model_configuration.day">
 				<source>Day</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_configuration.end_date">
+			<trans-unit id="tx_checkitcalendarize_domain_model_configuration.end_date">
 				<source>End date (optionally)</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_configuration.end_time">
+			<trans-unit id="tx_checkitcalendarize_domain_model_configuration.end_time">
 				<source>End time</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_configuration.external_ics_url">
+			<trans-unit id="tx_checkitcalendarize_domain_model_configuration.external_ics_url">
 				<source>External ICS URL</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_configuration.frequency">
+			<trans-unit id="tx_checkitcalendarize_domain_model_configuration.frequency">
 				<source>Frequency</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_configuration.groups">
+			<trans-unit id="tx_checkitcalendarize_domain_model_configuration.groups">
 				<source>Groups</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_configuration.interval">
+			<trans-unit id="tx_checkitcalendarize_domain_model_configuration.interval">
 				<source>Interval</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_configuration.recurrence">
+			<trans-unit id="tx_checkitcalendarize_domain_model_configuration.recurrence">
 				<source>Recurrence</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_configuration.start_date">
+			<trans-unit id="tx_checkitcalendarize_domain_model_configuration.start_date">
 				<source>Start date</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_configuration.with_range_last">
+			<trans-unit id="tx_checkitcalendarize_domain_model_configuration.with_range_last">
 				<source>Start date (Single dates first)</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_configuration.start_time">
+			<trans-unit id="tx_checkitcalendarize_domain_model_configuration.start_time">
 				<source>Start time</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_configuration.till_date">
+			<trans-unit id="tx_checkitcalendarize_domain_model_configuration.till_date">
 				<source>Till date</source>
 			</trans-unit>
-            <trans-unit id="tx_calendarize_domain_model_configuration.till_days_past">
+            <trans-unit id="tx_checkitcalendarize_domain_model_configuration.till_days_past">
                 <source>Till Days Past (only active if Till Days Relative is enabled)</source>
             </trans-unit>
-            <trans-unit id="tx_calendarize_domain_model_configuration.till_days_relative">
+            <trans-unit id="tx_checkitcalendarize_domain_model_configuration.till_days_relative">
                 <source>Till Days Relative</source>
             </trans-unit>
-            <trans-unit id="tx_calendarize_domain_model_configuration.till_days">
+            <trans-unit id="tx_checkitcalendarize_domain_model_configuration.till_days">
                 <source>Till Days (only active if Till date is empty)</source>
             </trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_configuration.type">
+			<trans-unit id="tx_checkitcalendarize_domain_model_configuration.type">
 				<source>Type</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_configurationgroup">
+			<trans-unit id="tx_checkitcalendarize_domain_model_configurationgroup">
 				<source>Configuration group</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_configurationgroup.configurations">
+			<trans-unit id="tx_checkitcalendarize_domain_model_configurationgroup.configurations">
 				<source>Configurations</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_configurationgroup.title">
+			<trans-unit id="tx_checkitcalendarize_domain_model_configurationgroup.title">
 				<source>Title</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_event">
+			<trans-unit id="tx_checkitcalendarize_domain_model_event">
 				<source>Event</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_event.abstract">
+			<trans-unit id="tx_checkitcalendarize_domain_model_event.abstract">
 				<source>Abstract</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_event.description">
+			<trans-unit id="tx_checkitcalendarize_domain_model_event.description">
 				<source>Description</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_event.downloads">
+			<trans-unit id="tx_checkitcalendarize_domain_model_event.downloads">
 				<source>Downloads</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_event.images">
+			<trans-unit id="tx_checkitcalendarize_domain_model_event.images">
 				<source>Images</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_event.import_id">
+			<trans-unit id="tx_checkitcalendarize_domain_model_event.import_id">
 				<source>Import ID</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_event.location">
+			<trans-unit id="tx_checkitcalendarize_domain_model_event.location">
 				<source>Location</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_event.title">
+			<trans-unit id="tx_checkitcalendarize_domain_model_event.title">
 				<source>Title</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_index">
+			<trans-unit id="tx_checkitcalendarize_domain_model_index">
 				<source>Index</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_index.all_day">
+			<trans-unit id="tx_checkitcalendarize_domain_model_index.all_day">
 				<source>All day</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_index.end_date">
+			<trans-unit id="tx_checkitcalendarize_domain_model_index.end_date">
 				<source>End date</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_index.end_time">
+			<trans-unit id="tx_checkitcalendarize_domain_model_index.end_time">
 				<source>End time</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_index.foreign_table">
+			<trans-unit id="tx_checkitcalendarize_domain_model_index.foreign_table">
 				<source>Foreign table</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_index.foreign_uid">
+			<trans-unit id="tx_checkitcalendarize_domain_model_index.foreign_uid">
 				<source>Foreign UID</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_index.start_date">
+			<trans-unit id="tx_checkitcalendarize_domain_model_index.start_date">
 				<source>Start date</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_index.start_time">
+			<trans-unit id="tx_checkitcalendarize_domain_model_index.start_time">
 				<source>Start time</source>
 			</trans-unit>
-			<trans-unit id="tx_calendarize_domain_model_index.unique_register_key">
+			<trans-unit id="tx_checkitcalendarize_domain_model_index.unique_register_key">
 				<source>Unique register key</source>
 			</trans-unit>
 			<trans-unit id="weekPid">
