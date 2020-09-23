@@ -9,7 +9,7 @@
 ---
 conf.py:
   copyright: 2017
-  project: Calendarize
+  project: Checkitcalendarize
   version: 3.1.0
   release: 3.1.0
   intersphinx_mapping:
@@ -18,9 +18,10 @@ conf.py:
     - null
   latex_documents:
   - - Index
-    - calendarize.tex
-    - Calendarize
+    - checkitcalendarize.tex
+    - Checkitcalendarize
     - Tim Lochmueller
+    - Dominik Senti
     - manual
   latex_elements:
     papersize: a4paper
