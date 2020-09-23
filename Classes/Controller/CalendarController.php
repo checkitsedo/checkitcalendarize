@@ -5,14 +5,14 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Controller;
+namespace Checkitsedo\Checkitcalendarize\Controller;
 
-use HDNET\Calendarize\Domain\Model\Index;
-use HDNET\Calendarize\Register;
-use HDNET\Calendarize\Utility\DateTimeUtility;
-use HDNET\Calendarize\Utility\EventUtility;
-use HDNET\Calendarize\Utility\ExtensionConfigurationUtility;
-use HDNET\Calendarize\Utility\TranslateUtility;
+use Checkitsedo\Checkitcalendarize\Domain\Model\Index;
+use Checkitsedo\Checkitcalendarize\Register;
+use Checkitsedo\Checkitcalendarize\Utility\DateTimeUtility;
+use Checkitsedo\Checkitcalendarize\Utility\EventUtility;
+use Checkitsedo\Checkitcalendarize\Utility\ExtensionConfigurationUtility;
+use Checkitsedo\Checkitcalendarize\Utility\TranslateUtility;
 use TYPO3\CMS\Backend\Utility\BackendUtility;
 use TYPO3\CMS\Core\Utility\ClassNamingUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
@@ -45,7 +45,7 @@ class CalendarController extends AbstractController
      */
     public function initializeAction()
     {
-        $this->addCacheTags(['calendarize']);
+        $this->addCacheTags(['checkitcalendarize']);
 
         parent::initializeAction();
         if (isset($this->settings['format'])) {
@@ -106,7 +106,7 @@ class CalendarController extends AbstractController
     /**
      * Latest action.
      *
-     * @param \HDNET\Calendarize\Domain\Model\Index $index
+     * @param \Checkitsedo\Checkitcalendarize\Domain\Model\Index $index
      * @param \DateTime $startDate
      * @param \DateTime $endDate
      * @param array $customSearch *
@@ -134,7 +134,7 @@ class CalendarController extends AbstractController
             $this->forward('detail');
         }
 
-        $this->addCacheTags(['calendarize_latest']);
+        $this->addCacheTags(['checkitcalendarize_latest']);
 
         $search = $this->determineSearch($startDate, $endDate, $customSearch, $year, $month, null, $week);
 
@@ -155,7 +155,7 @@ class CalendarController extends AbstractController
     /**
      * Result action.
      *
-     * @param \HDNET\Calendarize\Domain\Model\Index $index
+     * @param \Checkitsedo\Checkitcalendarize\Domain\Model\Index $index
      * @param \DateTime $startDate
      * @param \DateTime $endDate
      * @param array $customSearch
@@ -183,7 +183,7 @@ class CalendarController extends AbstractController
             $this->forward('detail');
         }
 
-        $this->addCacheTags(['calendarize_result']);
+        $this->addCacheTags(['checkitcalendarize_result']);
 
         $search = $this->determineSearch($startDate, $endDate, $customSearch, $year, $month, null, $week);
 
@@ -204,7 +204,7 @@ class CalendarController extends AbstractController
     /**
      * List action.
      *
-     * @param \HDNET\Calendarize\Domain\Model\Index $index
+     * @param \Checkitsedo\Checkitcalendarize\Domain\Model\Index $index
      * @param \DateTime $startDate
      * @param \DateTime $endDate
      * @param array $customSearch *
@@ -234,7 +234,7 @@ class CalendarController extends AbstractController
             $this->forward('detail');
         }
 
-        $this->addCacheTags(['calendarize_list']);
+        $this->addCacheTags(['checkitcalendarize_list']);
 
         $search = $this->determineSearch($startDate, $endDate, $customSearch, $year, $month, $day, $week);
 
@@ -258,7 +258,7 @@ class CalendarController extends AbstractController
      */
     public function shortcutAction()
     {
-        $this->addCacheTags(['calendarize_shortcut']);
+        $this->addCacheTags(['checkitcalendarize_shortcut']);
         list($table, $uid) = \explode(':', $GLOBALS['TSFE']->currentRecord);
         $register = Register::getRegister();
 
@@ -277,7 +277,7 @@ class CalendarController extends AbstractController
             return 'Invalid object';
         }
 
-        $this->addCacheTags(['calendarize_event_' . $event->getUid()]);
+        $this->addCacheTags(['checkitcalendarize_event_' . $event->getUid()]);
 
         $fetchEvent = $this->indexRepository->findByEventTraversing($event, true, false, 1);
         if (\count($fetchEvent) <= 0) {
@@ -301,7 +301,7 @@ class CalendarController extends AbstractController
         $limit = 100,
         $sort = 'ASC'
     ) {
-        $this->addCacheTags(['calendarize_past']);
+        $this->addCacheTags(['checkitcalendarize_past']);
 
         $limit = (int)($this->settings['limit']);
         $sort = $this->settings['sorting'];
@@ -318,7 +318,7 @@ class CalendarController extends AbstractController
      */
     public function yearAction($year = null)
     {
-        $this->addCacheTags(['calendarize_year']);
+        $this->addCacheTags(['checkitcalendarize_year']);
 
         $date = DateTimeUtility::normalizeDateTime(1, 1, $year);
         $now = DateTimeUtility::getNow();
@@ -340,7 +340,7 @@ class CalendarController extends AbstractController
      */
     public function quarterAction(int $year = null, int $quarter = null)
     {
-        $this->addCacheTags(['calendarize_quarter']);
+        $this->addCacheTags(['checkitcalendarize_quarter']);
 
         $quarter = DateTimeUtility::normalizeQuarter($quarter);
         $date = DateTimeUtility::normalizeDateTime(1, 1 + (($quarter - 1) * 3), $year);
@@ -361,7 +361,7 @@ class CalendarController extends AbstractController
      */
     public function monthAction($year = null, $month = null, $day = null)
     {
-        $this->addCacheTags(['calendarize_month']);
+        $this->addCacheTags(['checkitcalendarize_month']);
 
         $date = DateTimeUtility::normalizeDateTime($day, $month, $year);
         $now = DateTimeUtility::getNow();
@@ -386,7 +386,7 @@ class CalendarController extends AbstractController
      */
     public function weekAction($year = null, $week = null)
     {
-        $this->addCacheTags(['calendarize_week']);
+        $this->addCacheTags(['checkitcalendarize_week']);
 
         $now = DateTimeUtility::getNow();
         if (null === $year) {
@@ -427,7 +427,7 @@ class CalendarController extends AbstractController
      */
     public function dayAction($year = null, $month = null, $day = null)
     {
-        $this->addCacheTags(['calendarize_day']);
+        $this->addCacheTags(['checkitcalendarize_day']);
 
         $date = DateTimeUtility::normalizeDateTime($day, $month, $year);
         $date->modify('+12 hours');
@@ -449,7 +449,7 @@ class CalendarController extends AbstractController
     /**
      * Detail action.
      *
-     * @param \HDNET\Calendarize\Domain\Model\Index $index
+     * @param \Checkitsedo\Checkitcalendarize\Domain\Model\Index $index
      *
      * @return string
      */
@@ -472,7 +472,7 @@ class CalendarController extends AbstractController
             }
         }
 
-        $this->addCacheTags(['calendarize_detail', 'calendarize_index_' . $index->getUid(), 'calendarize_event_' . $index->getOriginalObject()->getUid()]);
+        $this->addCacheTags(['checkitcalendarize_detail', 'checkitcalendarize_index_' . $index->getUid(), 'checkitcalendarize_event_' . $index->getOriginalObject()->getUid()]);
 
         $this->slotExtendedAssignMultiple([
             'index' => $index,
@@ -495,7 +495,7 @@ class CalendarController extends AbstractController
      */
     public function searchAction(\DateTime $startDate = null, \DateTime $endDate = null, array $customSearch = [])
     {
-        $this->addCacheTags(['calendarize_search']);
+        $this->addCacheTags(['checkitcalendarize_search']);
 
         $baseDate = DateTimeUtility::getNow();
         if (!($startDate instanceof \DateTimeInterface)) {
@@ -520,7 +520,7 @@ class CalendarController extends AbstractController
      */
     public function singleAction()
     {
-        $this->addCacheTags(['calendarize_single']);
+        $this->addCacheTags(['checkitcalendarize_single']);
 
         $indicies = [];
 
