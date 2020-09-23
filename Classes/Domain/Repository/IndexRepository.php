@@ -5,14 +5,14 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Domain\Repository;
+namespace Checkitsedo\Checkitcalendarize\Domain\Repository;
 
 use Exception;
-use HDNET\Calendarize\Domain\Model\Index;
-use HDNET\Calendarize\Domain\Model\Request\OptionRequest;
-use HDNET\Calendarize\Utility\ConfigurationUtility;
-use HDNET\Calendarize\Utility\DateTimeUtility;
-use HDNET\Calendarize\Utility\ExtensionConfigurationUtility;
+use Checkitsedo\Checkitcalendarize\Domain\Model\Index;
+use Checkitsedo\Checkitcalendarize\Domain\Model\Request\OptionRequest;
+use Checkitsedo\Checkitcalendarize\Utility\ConfigurationUtility;
+use Checkitsedo\Checkitcalendarize\Utility\DateTimeUtility;
+use Checkitsedo\Checkitcalendarize\Utility\ExtensionConfigurationUtility;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Configuration\BackendConfigurationManager;
@@ -98,7 +98,7 @@ class IndexRepository extends AbstractRepository
         $query->getQuerySettings()->setLanguageMode('ignore');
 
         // Notice Selection without any language handling
-        unset($GLOBALS['TCA']['tx_calendarize_domain_model_index']['ctrl']['languageField'], $GLOBALS['TCA']['tx_calendarize_domain_model_index']['ctrl']['transOrigPointerField']);
+        unset($GLOBALS['TCA']['tx_checkitcalendarize_domain_model_index']['ctrl']['languageField'], $GLOBALS['TCA']['tx_checkitcalendarize_domain_model_index']['ctrl']['transOrigPointerField']);
 
         if ('asc' === $options->getDirection()) {
             $query->setOrderings([
@@ -417,9 +417,9 @@ class IndexRepository extends AbstractRepository
      */
     public function findDifferentTypesAndLocations(): array
     {
-        $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('tx_calendarize_domain_model_index');
+        $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('tx_checkitcalendarize_domain_model_index');
 
-        return (array)$queryBuilder->select('unique_register_key', 'pid', 'foreign_table')->from('tx_calendarize_domain_model_index')->groupBy('pid', 'foreign_table', 'unique_register_key')->execute()->fetchAll();
+        return (array)$queryBuilder->select('unique_register_key', 'pid', 'foreign_table')->from('tx_checkitcalendarize_domain_model_index')->groupBy('pid', 'foreign_table', 'unique_register_key')->execute()->fetchAll();
     }
 
     /**
