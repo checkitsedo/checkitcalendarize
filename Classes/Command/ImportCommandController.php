@@ -5,9 +5,9 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Command;
+namespace Checkitsedo\Checkitcalendarize\Command;
 
-use HDNET\Calendarize\Service\IndexerService;
+use Checkitsedo\Checkitcalendarize\Service\IndexerService;
 use TYPO3\CMS\Core\Messaging\FlashMessage;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
@@ -124,7 +124,7 @@ class ImportCommandController extends AbstractCommandController
     {
         if (!\class_exists('ICal')) {
             require_once ExtensionManagementUtility::extPath(
-                'calendarize',
+                'checkitcalendarize',
                 'Resources/Private/Php/ics-parser/class.iCalReader.php'
             );
         }
