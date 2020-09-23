@@ -1,19 +1,19 @@
 <?php
 
 /**
- * Uri to the booking.
+ * Uri to the index.
  */
 declare(strict_types=1);
 
 namespace HDNET\Calendarize\ViewHelpers\Uri;
 
 /**
- * Uri to the booking.
+ * Uri to the index.
  */
-class BookingViewHelper extends \HDNET\Calendarize\ViewHelpers\Link\BookingViewHelper
+class IndexViewHelper extends \HDNET\Calendarize\ViewHelpers\Link\IndexViewHelper
 {
     /**
-     * Render the uri to the given booking.
+     * Render the uri to the given index.
      *
      * @return string
      */
