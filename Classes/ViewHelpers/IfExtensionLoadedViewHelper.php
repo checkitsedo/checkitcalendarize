@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\ViewHelpers;
+namespace Checkitsedo\Checkitcalendarize\ViewHelpers;
 
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractConditionViewHelper;
