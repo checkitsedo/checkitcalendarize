@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Listener;
+namespace Checkitsedo\Checkitcalendarize\Listener;
 
-use HDNET\Calendarize\Register;
+use Checkitsedo\Checkitcalendarize\Register;
 use TYPO3\CMS\Core\Database\Event\AlterTableDefinitionStatementsEvent;
 
 class CalendarizeField
@@ -23,7 +23,7 @@ class CalendarizeField
     {
         $sql = [];
         foreach (Register::getRegister() as $configuration) {
-            $fieldName = isset($configuration['fieldName']) ? $configuration['fieldName'] : 'calendarize';
+            $fieldName = isset($configuration['fieldName']) ? $configuration['fieldName'] : 'checkitcalendarize';
             $sql[] = 'CREATE TABLE ' . $configuration['tableName'] . ' (' . $fieldName . ' tinytext);';
         }
 
