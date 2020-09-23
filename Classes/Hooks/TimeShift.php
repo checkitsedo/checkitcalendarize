@@ -5,10 +5,10 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Hooks;
+namespace Checkitsedo\Checkitcalendarize\Hooks;
 
 use HDNET\Autoloader\Annotation\Hook;
-use HDNET\Calendarize\Utility\DateTimeUtility;
+use Checkitsedo\Checkitcalendarize\Utility\DateTimeUtility;
 use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
@@ -48,6 +48,6 @@ class TimeShift extends AbstractHook
      */
     protected function getConfiguration(): array
     {
-        return (array)GeneralUtility::makeInstance(ExtensionConfiguration::class)->get('calendarize');
+        return (array)GeneralUtility::makeInstance(ExtensionConfiguration::class)->get('checkitcalendarize');
     }
 }
