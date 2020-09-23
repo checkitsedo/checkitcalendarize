@@ -1,0 +1,31 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+			xmlns:be="http://typo3.org/ns/TYPO3/CMS/Backend/ViewHelpers"
+			xmlns:core="http://typo3.org/ns/TYPO3/CMS/Core/ViewHelpers"
+			xmlns:c="http://typo3.org/ns/HDNET/Calendarize/ViewHelpers"
+			data-namespace-typo3-fluid="true">
+
+<tr>
+	<td>
+		<core:iconForRecord table="{index.foreignTable}" row="{uid: index.originalObject.uid}" />
+		<f:render partial="{index.configuration.partialIdentifier}/Title" arguments="{index: index}" />
+	</td>
+	<td>
+		<f:render partial="DateInformation" arguments="{index: index}"/>
+	</td>
+	<td>
+		{index.configuration.uniqueRegisterKey}
+	</td>
+	<td>
+		<c:languageInformation languageUid="{index.sysLanguageUid}" pid="{index.pid}" />
+	</td>
+	<td>
+		{index.foreignUid}
+	</td>
+	<td>
+		<be:link.editRecord class="btn btn-default" uid="{index.foreignUid}" table="{index.configuration.tableName}"
+												returnUrl="{f:be.uri(route: 'web_CalendarizeCalendarize')}">
+			<core:icon identifier="actions-document-open"/>
+		</be:link.editRecord>
+	</td>
+</tr>
+</html>
