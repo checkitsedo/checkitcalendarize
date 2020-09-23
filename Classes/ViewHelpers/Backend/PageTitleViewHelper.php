@@ -5,9 +5,9 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\ViewHelpers\Backend;
+namespace Checkitsedo\Checkitcalendarize\ViewHelpers\Backend;
 
-use HDNET\Calendarize\ViewHelpers\AbstractViewHelper;
+use Checkitsedo\Checkitcalendarize\ViewHelpers\AbstractViewHelper;
 use TYPO3\CMS\Backend\Utility\BackendUtility;
 
 /**
