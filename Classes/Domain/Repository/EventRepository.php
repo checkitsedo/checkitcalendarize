@@ -5,10 +5,10 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Domain\Repository;
+namespace Checkitsedo\Checkitcalendarize\Domain\Repository;
 
-use HDNET\Calendarize\Domain\Model\Event;
-use HDNET\Calendarize\Domain\Model\Index;
+use Checkitsedo\Checkitcalendarize\Domain\Model\Event;
+use Checkitsedo\Checkitcalendarize\Domain\Model\Index;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Object\ObjectManager;
 use TYPO3\CMS\Extbase\Persistence\Generic\Query;
