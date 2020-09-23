@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Domain\Model;
+namespace Checkitsedo\Checkitcalendarize\Domain\Model;
 
 /**
  * Configuration Interface for constants.
