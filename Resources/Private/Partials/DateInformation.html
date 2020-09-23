@@ -1,0 +1,8 @@
+<f:if condition="{settings.useMomentJsDateAndTimeOutput}">
+	<f:then>
+		<f:render partial="Date/Moment" arguments="{_all}" />
+	</f:then>
+	<f:else>
+		<f:render partial="Date/Static" arguments="{_all}" />
+	</f:else>
+</f:if>

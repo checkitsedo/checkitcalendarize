@@ -1,0 +1,90 @@
+{namespace c=HDNET\Calendarize\ViewHelpers}
+
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th colspan="7">
+				<f:if condition="{settings.monthPid}">
+					<f:if condition="{c:ifDateUpper(base: settings.dateLimitBrowserPrev, check:{date -> c:dateTime.modify(modification: 'first day of last month')})}">
+						<c:link.month pageUid="{settings.monthPid}" date="{date -> c:dateTime.modify(modification: 'first day of last month')}">
+							&lt;
+						</c:link.month>
+					</f:if>
+				</f:if>
+				<f:format.date format="%B %Y">{date}</f:format.date>
+				<f:if condition="{settings.monthPid}">
+					<f:if condition="{c:ifDateLower(base: settings.dateLimitBrowserNext, check:{date -> c:dateTime.modify(modification: 'first day of next month')})}">
+						<c:link.month pageUid="{settings.monthPid}" date="{date -> c:dateTime.modify(modification: 'first day of next month')}">
+							&gt;
+						</c:link.month>
+					</f:if>
+				</f:if>
+			</th>
+		</tr>
+	</thead>
+	<tbody class="regularMonthView">
+		<c:loop.weeksInMonth date="{date}" iteration="week" weekStartsAt="{settings.weekStart}">
+			<tr>
+				<c:loop.daysInWeek date="{week.calendar.date}" iteration="day" weekStartsAt="{settings.weekStart}">
+					<f:if condition="{c:dateTime.indexOnDay(indices: indices, day:day.calendar.date)}">
+						<f:then>
+							<td class="active hasEvents{f:if(condition: '{date->f:format.date(format: \'d.m.Y\')} == {day.calendar.date->f:format.date(format: \'d.m.Y\')} && !{ignoreSelectedDay}', then: ' selectedDay')} {f:if(condition: '{date->f:format.date(format: \'m\')} != {day.calendar.date->f:format.date(format: \'m\')}', then: 'not-current-month')}">
+								<f:if condition="{settings.dayPid}">
+									<f:then>
+										<c:link.day pageUid="{settings.dayPid}" date="{day.calendar.date}">
+											<f:format.date format="d">{day.calendar.date}</f:format.date>
+										</c:link.day>
+									</f:then>
+									<f:else>
+										<f:format.date format="d">{day.calendar.date}</f:format.date>
+									</f:else>
+								</f:if>
+								<f:if condition="{settings.detailPid}">
+									<ul class="events">
+										<f:for each="{indices}" as="index">
+											<f:if condition="{c:dateTime.indexOnDay(index: index, day:day.calendar.date)}">
+												<li>
+													<c:link.index index="{index}" pageUid="{settings.detailPid}">
+														<f:render partial="{index.configuration.partialIdentifier}/Title" arguments="{index: index}" />
+													</c:link.index>
+												</li>
+											</f:if>
+										</f:for>
+									</ul>
+								</f:if>
+							</td>
+						</f:then>
+						<f:else>
+							<td class="{f:if(condition: '{date->f:format.date(format: \'d.m.Y\')} == {day.calendar.date->f:format.date(format: \'d.m.Y\')} && !{ignoreSelectedDay}', then: 'selectedDay')} {f:if(condition: '{date->f:format.date(format: \'m\')} != {day.calendar.date->f:format.date(format: \'m\')}', then: 'not-current-month')}">
+								<f:format.date format="d">{day.calendar.date}</f:format.date>
+							</td>
+						</f:else>
+					</f:if>
+				</c:loop.daysInWeek>
+			</tr>
+		</c:loop.weeksInMonth>
+	</tbody>
+</table>
+
+<f:if condition="{settings.useMomentFullCalendarIo}">
+	<div class="fullCalendarIo" data-language="{c:language()}">&nbsp;</div>
+
+	<script type="text/javascript">
+		let monthEvents = [];
+		let monthEventsCurrentDate = '<f:format.date format="Y-m-d">{date}</f:format.date>';
+		let monthFirstDay = '{settings.weekStart}';
+		<f:for each="{indices}" as="index">
+			tmp = {};
+			tmp.id = {index.uid};
+			tmp.allDay = false;
+			tmp.title = <f:format.raw><c:jsQuote><f:render partial="{index.configuration.partialIdentifier}/Title" arguments="{index: index}" /></c:jsQuote></f:format.raw>;
+			tmp.start = '<f:format.date format="c">{index.startDateComplete}</f:format.date>';
+			tmp.end =  '<f:format.date format="{f:if(condition: index.allDay, then: 'Y-m-d', else: 'c')}" base="{index.endDateComplete}">+1 day</f:format.date>';
+			<f:if condition="{index.allDay}">
+				tmp.allDay = true;
+			</f:if>
+			tmp.url = '<c:uri.index index="{index}" pageUid="{settings.detailPid}" />';
+			monthEvents.push(tmp);
+		</f:for>
+	</script>
+</f:if>
