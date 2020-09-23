@@ -5,9 +5,9 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Command;
+namespace Checkitsedo\Checkitcalendarize\Command;
 
-use HDNET\Calendarize\Service\IndexerService;
+use Checkitsedo\Checkitcalendarize\Service\IndexerService;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
