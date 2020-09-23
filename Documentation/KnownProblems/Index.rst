@@ -5,7 +5,7 @@
 
 .. include:: ../Includes.txt
 
-All known problems are listed on GitHub in the issue tracker at https://github.com/lochmueller/calendarize/issues
+All known problems are listed on GitHub in the issue tracker at https://github.com/checkitsedo/checkitcalendarize/issues
 
 If you find a bug or have a feature request for this extension, please create a issue in the issue tracker on GitHub.
 
