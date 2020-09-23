@@ -5,12 +5,12 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Service;
+namespace Checkitsedo\Checkitcalendarize\Service;
 
-use HDNET\Calendarize\Domain\Model\Configuration;
-use HDNET\Calendarize\Utility\DateTimeUtility;
-use HDNET\Calendarize\Utility\HelperUtility;
-use HDNET\Calendarize\Utility\TranslateUtility;
+use Checkitsedo\Checkitcalendarize\Domain\Model\Configuration;
+use Checkitsedo\Checkitcalendarize\Utility\DateTimeUtility;
+use Checkitsedo\Checkitcalendarize\Utility\HelperUtility;
+use Checkitsedo\Checkitcalendarize\Utility\TranslateUtility;
 use TYPO3\CMS\Backend\Utility\BackendUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Utility\MathUtility;
@@ -74,9 +74,9 @@ class TcaService extends AbstractService
             return;
         }
 
-        $configurations = isset($fullRow['calendarize']) ? GeneralUtility::intExplode(
+        $configurations = isset($fullRow['checkitcalendarize']) ? GeneralUtility::intExplode(
             ',',
-            $fullRow['calendarize'],
+            $fullRow['checkitcalendarize'],
             true
         ) : [];
 
@@ -88,7 +88,7 @@ class TcaService extends AbstractService
             $paramsInternal = [
                 'row' => (array)$databaseConnection->select(
                     ['*'],
-                    'tx_calendarize_domain_model_configuration',
+                    'tx_checkitcalendarize_domain_model_configuration',
                     ['uid' => $value]
                 )->fetch(),
                 'title' => '',
@@ -125,7 +125,7 @@ class TcaService extends AbstractService
         $title = '';
         $groups = GeneralUtility::trimExplode(',', $row['groups'], true);
         foreach ($groups as $key => $id) {
-            $row = BackendUtility::getRecord('tx_calendarize_domain_model_configurationgroup', $id);
+            $row = BackendUtility::getRecord('tx_checkitcalendarize_domain_model_configurationgroup', $id);
             $groups[$key] = $row['title'] . ' (#' . $id . ')';
         }
         if ($groups) {
@@ -157,7 +157,7 @@ class TcaService extends AbstractService
             }
         }
         if ($row['all_day']) {
-            $title .= ' ' . TranslateUtility::get('tx_calendarize_domain_model_index.all_day');
+            $title .= ' ' . TranslateUtility::get('tx_checkitcalendarize_domain_model_index.all_day');
         } elseif ($row['start_time']) {
             $title .= ' <br />' . BackendUtility::time($row['start_time'] % DateTimeUtility::SECONDS_DAY, false);
             $title .= ' - ' . BackendUtility::time($row['end_time'] % DateTimeUtility::SECONDS_DAY, false);
