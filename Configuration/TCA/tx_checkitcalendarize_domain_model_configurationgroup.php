@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use HDNET\Autoloader\Utility\ArrayUtility;
 use HDNET\Autoloader\Utility\ModelUtility;
-use HDNET\Calendarize\Domain\Model\ConfigurationGroup;
+use Checkitsedo\Checkitcalendarize\Domain\Model\ConfigurationGroup;
 
 $base = ModelUtility::getTcaInformation(ConfigurationGroup::class);
 
@@ -14,7 +14,7 @@ $custom = [
     ],
     'types' => [
         '1' => [
-            'showitem' => \str_replace('configurations,', 'configurations,calendarize_info,', $base['types']['1']['showitem']),
+            'showitem' => \str_replace('configurations,', 'configurations,checkitcalendarize_info,', $base['types']['1']['showitem']),
         ],
     ],
     'columns' => [
@@ -26,13 +26,13 @@ $custom = [
         'configurations' => [
             'config' => [
                 'type' => 'inline',
-                'foreign_table' => 'tx_calendarize_domain_model_configuration',
+                'foreign_table' => 'tx_checkitcalendarize_domain_model_configuration',
                 'minitems' => 1,
                 'maxitems' => 100,
             ],
         ],
         'calendarize_info' => [
-            'label' => 'LLL:EXT:calendarize/Resources/Private/Language/locallang.xlf:tca.information',
+            'label' => 'LLL:EXT:checkitcalendarize/Resources/Private/Language/locallang.xlf:tca.information',
             'config' => [
                 'type' => 'user',
                 'renderType' => 'calendarizeInfoElement',
