@@ -7,23 +7,23 @@ if (!\defined('TYPO3_MODE')) {
     die('Access denied.');
 }
 
-\HDNET\Autoloader\Loader::extTables('HDNET', 'calendarize', \HDNET\Calendarize\Register::getDefaultAutoloader());
-\HDNET\Calendarize\Register::extTables(\HDNET\Calendarize\Register::getGroupCalendarizeConfiguration());
+\HDNET\Autoloader\Loader::extTables('Checkitsedo', 'checkitcalendarize', \Checkitsedo\Checkitcalendarize\Register::getDefaultAutoloader());
+\Checkitsedo\Checkitcalendarize\Register::extTables(\Checkitsedo\Checkitcalendarize\Register::getGroupCalendarizeConfiguration());
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_calendarize_domain_model_configuration,tx_calendarize_domain_model_index');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_checkitcalendarize_domain_model_configuration,tx_checkitcalendarize_domain_model_index');
 
 if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('ke_search')) {
-    $GLOBALS['TCA']['tx_kesearch_indexerconfig']['columns']['sysfolder']['displayCond'] .= ',calendarize';
+    $GLOBALS['TCA']['tx_kesearch_indexerconfig']['columns']['sysfolder']['displayCond'] .= ',checkitcalendarize';
 }
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-    'calendarize',
+    'checkitcalendarize',
     'Calendar',
-    \HDNET\Calendarize\Utility\TranslateUtility::getLll('pluginName')
+    \Checkitsedo\Checkitcalendarize\Utility\TranslateUtility::getLll('pluginName')
 );
 
 // module icon
-$folderIcon = 'EXT:calendarize/Resources/Public/Icons/apps-pagetree-folder-contains-calendarize.svg';
+$folderIcon = 'EXT:checkitcalendarize/Resources/Public/Icons/apps-pagetree-folder-contains-calendarize.svg';
 /** @var \TYPO3\CMS\Core\Imaging\IconRegistry $iconRegistry */
 $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
 $iconRegistry->registerIcon(
@@ -33,16 +33,16 @@ $iconRegistry->registerIcon(
 );
 
 $categoryRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Category\CategoryRegistry::class);
-$categoryRegistry->add('calendarize', 'tx_calendarize_domain_model_pluginconfiguration');
+$categoryRegistry->add('checkitcalendarize', 'tx_checkitcalendarize_domain_model_pluginconfiguration');
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('
 	TCEMAIN {
 		linkHandler {
-			tx_calendarize_domain_model_event {
+			tx_checkitcalendarize_domain_model_event {
 				handler = TYPO3\CMS\Recordlist\LinkHandler\RecordLinkHandler
 				label = Events
 				configuration {
-					table = tx_calendarize_domain_model_event
+					table = tx_checkitcalendarize_domain_model_event
 				}
 				scanAfter = page
 			}
@@ -51,39 +51,39 @@ $categoryRegistry->add('calendarize', 'tx_calendarize_domain_model_pluginconfigu
 ');
 
     \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerModule(
-        'HDNET.calendarize',
+        'Checkitsedo.checkitcalendarize',
         'web',
-        'calendarize',
+        'checkitcalendarize',
         '',
         ['Backend' => 'list,option'],
         [
             // Additional configuration
             'access' => 'user, group',
-            'icon' => 'EXT:calendarize/Resources/Public/Icons/Extension.svg',
+            'icon' => 'EXT:checkitcalendarize/Resources/Public/Icons/Extension.svg',
             'iconIdentifier' => 'module-my_redirects',
-            'labels' => 'LLL:EXT:calendarize/Resources/Private/Language/locallang_mod.xlf',
+            'labels' => 'LLL:EXT:checkitcalendarize/Resources/Private/Language/locallang_mod.xlf',
             'navigationComponentId' => ''
         ]
     );
 
 
 
-$iconPath = \TYPO3\CMS\Core\Utility\PathUtility::getAbsoluteWebPath(\TYPO3\CMS\Core\Utility\GeneralUtility::getFileAbsFileName('EXT:calendarize/Resources/Public/Icons/'));
+$iconPath = \TYPO3\CMS\Core\Utility\PathUtility::getAbsoluteWebPath(\TYPO3\CMS\Core\Utility\GeneralUtility::getFileAbsFileName('EXT:checkitcalendarize/Resources/Public/Icons/'));
 $iconRegistry->registerIcon(
-    'apps-calendarize-type-' . \HDNET\Calendarize\Domain\Model\Configuration::TYPE_TIME,
+    'apps-calendarize-type-' . \Checkitsedo\Checkitcalendarize\Domain\Model\Configuration::TYPE_TIME,
     \TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider::class,
     ['source' => $iconPath . 'Configuration.png']
 );
 $iconRegistry->registerIcon(
-    'apps-calendarize-type-' . \HDNET\Calendarize\Domain\Model\Configuration::TYPE_GROUP,
+    'apps-calendarize-type-' . \Checkitsedo\Checkitcalendarize\Domain\Model\Configuration::TYPE_GROUP,
     \TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider::class,
     ['source' => $iconPath . 'ConfigurationGroupType.png']
 );
 $iconRegistry->registerIcon(
-    'apps-calendarize-type-' . \HDNET\Calendarize\Domain\Model\Configuration::TYPE_EXTERNAL,
+    'apps-calendarize-type-' . \Checkitsedo\Checkitcalendarize\Domain\Model\Configuration::TYPE_EXTERNAL,
     \TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider::class,
     ['source' => $iconPath . 'ConfigurationExternal.png']
 );
 
 // Exclude "pages" and obsolete fields
-$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist']['calendarize_calendar'] = 'recursive,select_key,pages';
+$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist']['checkitcalendarize_calendar'] = 'recursive,select_key,pages';
