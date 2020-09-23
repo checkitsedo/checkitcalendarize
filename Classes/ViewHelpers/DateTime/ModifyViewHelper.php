@@ -5,9 +5,9 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\ViewHelpers\DateTime;
+namespace Checkitsedo\Checkitcalendarize\ViewHelpers\DateTime;
 
-use HDNET\Calendarize\ViewHelpers\AbstractViewHelper;
+use Checkitsedo\Checkitcalendarize\ViewHelpers\AbstractViewHelper;
 
 /**
  * Modify a DateTime@.
