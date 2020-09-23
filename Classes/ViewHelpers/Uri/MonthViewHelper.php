@@ -5,12 +5,12 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\ViewHelpers\Uri;
+namespace Checkitsedo\Checkitcalendarize\ViewHelpers\Uri;
 
 /**
  * Uri to the month.
  */
-class MonthViewHelper extends \HDNET\Calendarize\ViewHelpers\Link\MonthViewHelper
+class MonthViewHelper extends \Checkitsedo\Checkitcalendarize\ViewHelpers\Link\MonthViewHelper
 {
     /**
      * Render the uri to the given month.
