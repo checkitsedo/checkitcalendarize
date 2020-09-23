@@ -1,4 +1,4 @@
-{namespace c=HDNET\Calendarize\ViewHelpers}<f:if condition="{index}">BEGIN:VEVENT
+{namespace c=Checkitsedo\Checkitcalendarize\ViewHelpers}<f:if condition="{index}">BEGIN:VEVENT
 UID:calendarize-{index.uid}<f:if condition="{index.tstamp}">
 DTSTAMP:<f:format.date format="%Y%m%d">{index.tstamp}</f:format.date></f:if>
 DTSTART:<c:dateTime.formatUtcDate date="{index.startDateComplete}" format="{f:if(condition: index.allDay, then: '%Y%m%d', else: '%Y%m%dT%H%M%SZ')}" />
