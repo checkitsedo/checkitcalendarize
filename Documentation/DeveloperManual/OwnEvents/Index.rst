@@ -9,13 +9,13 @@ The concept of the calendarize extension is the creation of own models and table
 
 	// in ext_tables.php
 	$configuration = [...];
-	\HDNET\Calendarize\Register::extTables($configuration);
+	\Checkitsedo\Checkitcalendarize\Register::extTables($configuration);
 
 .. code-block:: php
 
 	// in ext_localconf.php
 	$configuration = [...];
-	\HDNET\Calendarize\Register::extLocalconf($configuration);
+	\Checkitsedo\Checkitcalendarize\Register::extLocalconf($configuration);
 
 
 The following code show the configuration that should be the same in ext_tables and ext_localconf:
@@ -25,7 +25,7 @@ The following code show the configuration that should be the same in ext_tables 
 	$configuration = [
         'uniqueRegisterKey' => 'MyEvent', // A unique Key for the register (e.g. you Extension Key + "Event")
         'title'             => 'My Event', // The title for your events (this is shown in the FlexForm configuration of the Plugins)
-        'modelName'         => \HDNET\MyExtension\Domain\Model\MyEvent::class, // the name of your model
+        'modelName'         => \Checkitsedo\MyExtension\Domain\Model\MyEvent::class, // the name of your model
         'partialIdentifier' => 'MyEvent', // the identifier of the partials for your event. In most cases this is also unique
         'tableName'         => 'tx_myextension_domain_model_myevent', // the table name of your event table
         'required'          => true, // set to true, than your event need a least one event configuration
@@ -39,11 +39,11 @@ In order to load the needed column mapping for your Model, you have to override 
 .. code-block:: php
 
     // in Configuration/TCA/Overrides/<tx_extension_domain_model_event>.php
-    \HDNET\Calendarize\Register::createTcaConfiguration($configuration);
+    \Checkitsedo\Checkitcalendarize\Register::createTcaConfiguration($configuration);
 
 To modify the amount of items shown in the preview you can change the amount in the ext_tables.php after calling the Register::extTables method.
 The default value is 10 items.
 
 .. code-block:: php
 	// in ext_tables.php
-	$GLOBALS['TCA']['tx_myextension_domain_model_myevent']['columns']['calendarize_info']['config']['items'] = 25;
+	$GLOBALS['TCA']['tx_myextension_domain_model_myevent']['columns']['checkitcalendarize_info']['config']['items'] = 25;
