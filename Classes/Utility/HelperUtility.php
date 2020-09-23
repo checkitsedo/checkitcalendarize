@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Utility;
+namespace Checkitsedo\Checkitcalendarize\Utility;
 
 use function get_class;
 use function is_object;
