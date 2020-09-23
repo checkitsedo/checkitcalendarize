@@ -1,0 +1,26 @@
+{
+    "name": "jmbtechnologylimited/icaldissect",
+    "type": "library",
+    "description": "Parses a ICAL file.",
+    "keywords": ["ical"],
+    "homepage": "https://github.com/JMB-Technology-Limited/ICalDissect",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "James Baster",
+            "email": "james@jarofgreen.co.uk",
+            "homepage": "http://jamesbaster.co.uk",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "JMBTechnologyLimited": "src"
+        }
+    },
+    "require-dev": {
+    }
+}
