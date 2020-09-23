@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Service\Url;
+namespace Checkitsedo\Checkitcalendarize\Service\Url;
 
 use Bednarik\Cooluri\Core\Functions;
 
@@ -53,7 +53,7 @@ class CoolUri extends AbstractUrl
      * @param string $xml
      * @param int    $value
      *
-     * @throws \HDNET\Calendarize\Exception
+     * @throws \Checkitsedo\Checkitcalendarize\Exception
      *
      * @return string
      */
