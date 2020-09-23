@@ -5,13 +5,13 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Service\Url;
+namespace Checkitsedo\Checkitcalendarize\Service\Url;
 
-use HDNET\Calendarize\Domain\Model\Index;
-use HDNET\Calendarize\Domain\Repository\IndexRepository;
-use HDNET\Calendarize\Features\SpeakingUrlInterface;
-use HDNET\Calendarize\Service\AbstractService;
-use HDNET\Calendarize\Utility\ConfigurationUtility;
+use Checkitsedo\Checkitcalendarize\Domain\Model\Index;
+use Checkitsedo\Checkitcalendarize\Domain\Repository\IndexRepository;
+use Checkitsedo\Checkitcalendarize\Features\SpeakingUrlInterface;
+use Checkitsedo\Checkitcalendarize\Service\AbstractService;
+use Checkitsedo\Checkitcalendarize\Utility\ConfigurationUtility;
 use TYPO3\CMS\Core\Routing\Aspect\PersistedAliasMapper;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Object\ObjectManager;
