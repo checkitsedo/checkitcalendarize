@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Seo;
+namespace Checkitsedo\Checkitcalendarize\Seo;
 
 use Psr\Http\Message\ServerRequestInterface;
 use TYPO3\CMS\Core\Context\Context;
@@ -37,7 +37,7 @@ class EventXmlSitemapDataProvider extends AbstractXmlSitemapDataProvider
      */
     public function generateItems(): void
     {
-        $table = 'tx_calendarize_domain_model_index';
+        $table = 'tx_checkitcalendarize_domain_model_index';
 
         $pids = !empty($this->config['pid']) ? GeneralUtility::intExplode(',', $this->config['pid']) : [];
         $lastModifiedField = $this->config['lastModifiedField'] ?? 'tstamp';
@@ -108,7 +108,7 @@ class EventXmlSitemapDataProvider extends AbstractXmlSitemapDataProvider
         $pageId = $this->config['url']['pageId'] ?? $GLOBALS['TSFE']->id;
 
         $additionalParams = [
-            'tx_calendarize_calendar' => [
+            'tx_checkitcalendarize_calendar' => [
                 'index' => $data['data']['uid'],
             ],
         ];
