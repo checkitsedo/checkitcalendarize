@@ -21,7 +21,7 @@ $EM_CONF[$_EXTKEY] = [
     ],
     'autoload' => [
         'psr-4' => [
-            'HDNET\\Calendarize\\' => 'Classes/',
+            'Checkitsedo\\Checkitcalendarize\\' => 'Classes/',
             'JMBTechnologyLimited\\ICalDissect\\' => 'Resources/Private/Php/ICalDissect/src/JMBTechnologyLimited/ICalDissect/',
         ],
     ],
