@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use HDNET\Autoloader\Utility\ArrayUtility;
 use HDNET\Autoloader\Utility\ModelUtility;
-use HDNET\Calendarize\Domain\Model\Index;
+use Checkitsedo\Checkitcalendarize\Domain\Model\Index;
 
 $base = ModelUtility::getTcaInformation(Index::class);
 
