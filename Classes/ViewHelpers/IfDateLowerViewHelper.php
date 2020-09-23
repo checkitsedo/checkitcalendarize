@@ -5,9 +5,9 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\ViewHelpers;
+namespace Checkitsedo\Checkitcalendarize\ViewHelpers;
 
-use HDNET\Calendarize\Utility\DateTimeUtility;
+use Checkitsedo\Checkitcalendarize\Utility\DateTimeUtility;
 
 /**
  * Check if a date is lower.
