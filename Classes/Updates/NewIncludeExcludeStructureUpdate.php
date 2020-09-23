@@ -5,10 +5,10 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Updates;
+namespace Checkitsedo\Checkitcalendarize\Updates;
 
-use HDNET\Calendarize\Domain\Model\ConfigurationInterface;
-use HDNET\Calendarize\Utility\HelperUtility;
+use Checkitsedo\Checkitcalendarize\Domain\Model\ConfigurationInterface;
+use Checkitsedo\Checkitcalendarize\Utility\HelperUtility;
 use TYPO3\CMS\Install\Updates\DatabaseUpdatedPrerequisite;
 use TYPO3\CMS\Install\Updates\UpgradeWizardInterface;
 
@@ -33,7 +33,7 @@ class NewIncludeExcludeStructureUpdate implements UpgradeWizardInterface
      */
     public function checkForUpdate(&$description)
     {
-        $table = 'tx_calendarize_domain_model_configuration';
+        $table = 'tx_checkitcalendarize_domain_model_configuration';
 
         $q = HelperUtility::getDatabaseConnection($table)->createQueryBuilder();
 
@@ -67,7 +67,7 @@ class NewIncludeExcludeStructureUpdate implements UpgradeWizardInterface
      */
     public function executeUpdate(): bool
     {
-        $table = 'tx_calendarize_domain_model_configuration';
+        $table = 'tx_checkitcalendarize_domain_model_configuration';
 
         $q = HelperUtility::getDatabaseConnection($table)->createQueryBuilder();
         $q->update($table)
