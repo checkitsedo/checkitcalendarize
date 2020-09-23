@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Hooks;
+namespace Checkitsedo\Checkitcalendarize\Hooks;
 
 /**
  * Abstraction of hooks.
