@@ -5,11 +5,11 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Service;
+namespace Checkitsedo\Checkitcalendarize\Service;
 
-use HDNET\Calendarize\Domain\Model\PluginConfiguration;
-use HDNET\Calendarize\Register;
-use HDNET\Calendarize\Utility\HelperUtility;
+use Checkitsedo\Checkitcalendarize\Domain\Model\PluginConfiguration;
+use Checkitsedo\Checkitcalendarize\Register;
+use Checkitsedo\Checkitcalendarize\Utility\HelperUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\SignalSlot\Dispatcher;
 
@@ -85,7 +85,7 @@ class PluginConfigurationService
      */
     protected function buildPluginConfigurationObject($uid)
     {
-        $table = 'tx_calendarize_domain_model_pluginconfiguration';
+        $table = 'tx_checkitcalendarize_domain_model_pluginconfiguration';
 
         $db = HelperUtility::getDatabaseConnection($table);
         $row = $db->select(['*'], $table, ['uid' => (int)$uid])->fetch();
