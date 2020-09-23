@@ -5,10 +5,10 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize;
+namespace Checkitsedo\Checkitcalendarize;
 
-use HDNET\Calendarize\Domain\Model\ConfigurationGroup;
-use HDNET\Calendarize\Domain\Model\Event;
+use Checkitsedo\Checkitcalendarize\Domain\Model\ConfigurationGroup;
+use Checkitsedo\Checkitcalendarize\Domain\Model\Event;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
 /**
@@ -62,7 +62,7 @@ class Register
      */
     public static function getRegister(): array
     {
-        return \is_array($GLOBALS['TYPO3_CONF_VARS']['EXT']['Calendarize']) ? $GLOBALS['TYPO3_CONF_VARS']['EXT']['Calendarize'] : [];
+        return \is_array($GLOBALS['TYPO3_CONF_VARS']['EXT']['Checkitcalendarize']) ? $GLOBALS['TYPO3_CONF_VARS']['EXT']['Checkitcalendarize'] : [];
     }
 
     /**
@@ -79,7 +79,7 @@ class Register
             'title' => 'Calendarize Event',
             'modelName' => Event::class,
             'partialIdentifier' => 'Event',
-            'tableName' => 'tx_calendarize_domain_model_event',
+            'tableName' => 'tx_checkitcalendarize_domain_model_event',
             'required' => true,
             // 'tcaTypeList'       => '', // optional - only for special type elements
             // 'overrideBookingRequestModel' => \NAME\SPACE\CLASS\Name::class,
@@ -99,7 +99,7 @@ class Register
             'title' => 'Calendarize Configuration Group',
             'modelName' => ConfigurationGroup::class,
             'partialIdentifier' => 'ConfigurationGroup',
-            'tableName' => 'tx_calendarize_domain_model_configurationgroup',
+            'tableName' => 'tx_checkitcalendarize_domain_model_configurationgroup',
             'required' => true,
             'fieldName' => 'configurations',
         ];
@@ -112,15 +112,15 @@ class Register
      */
     public static function createTcaConfiguration(array $configuration)
     {
-        $fieldName = isset($configuration['fieldName']) ? $configuration['fieldName'] : 'calendarize';
+        $fieldName = isset($configuration['fieldName']) ? $configuration['fieldName'] : 'checkitcalendarize';
         $tableName = $configuration['tableName'];
         $typeList = isset($configuration['tcaTypeList']) ? \trim($configuration['tcaTypeList']) : '';
         $GLOBALS['TCA'][$tableName]['columns'][$fieldName] = [
-            'label' => 'Calendarize',
+            'label' => 'Checkitcalendarize',
             'l10n_mode' => 'exclude',
             'config' => [
                 'type' => 'inline',
-                'foreign_table' => 'tx_calendarize_domain_model_configuration',
+                'foreign_table' => 'tx_checkitcalendarize_domain_model_configuration',
                 'minitems' => $configuration['required'] ? 1 : 0,
                 'maxitems' => 99,
                 'behaviour' => [
@@ -129,8 +129,8 @@ class Register
             ],
         ];
 
-        $GLOBALS['TCA'][$tableName]['columns']['calendarize_info'] = [
-            'label' => 'LLL:EXT:calendarize/Resources/Private/Language/locallang.xlf:tca.information',
+        $GLOBALS['TCA'][$tableName]['columns']['checkitcalendarize_info'] = [
+            'label' => 'LLL:EXT:checkitcalendarize/Resources/Private/Language/locallang.xlf:tca.information',
             'config' => [
                 'type' => 'user',
                 'renderType' => 'calendarizeInfoElement',
@@ -139,7 +139,7 @@ class Register
                 ],
             ],
         ];
-        ExtensionManagementUtility::addToAllTCAtypes($tableName, $fieldName . ',calendarize_info', $typeList);
+        ExtensionManagementUtility::addToAllTCAtypes($tableName, $fieldName . ',checkitcalendarize_info', $typeList);
     }
 
     /**
@@ -149,6 +149,6 @@ class Register
      */
     protected static function registerItem(array $configuration)
     {
-        $GLOBALS['TYPO3_CONF_VARS']['EXT']['Calendarize'][$configuration['uniqueRegisterKey']] = $configuration;
+        $GLOBALS['TYPO3_CONF_VARS']['EXT']['Checkitcalendarize'][$configuration['uniqueRegisterKey']] = $configuration;
     }
 }
