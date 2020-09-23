@@ -5,9 +5,9 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Service;
+namespace Checkitsedo\Checkitcalendarize\Service;
 
-use HDNET\Calendarize\Utility\DateTimeUtility;
+use Checkitsedo\Checkitcalendarize\Utility\DateTimeUtility;
 use JMBTechnologyLimited\ICalDissect\ICalEvent;
 use JMBTechnologyLimited\ICalDissect\ICalParser;
 use Sabre\VObject\Reader;
@@ -163,7 +163,7 @@ class IcsReaderService extends AbstractService
      */
     protected function getCheckedCacheFolder(): string
     {
-        $cacheFolder = GeneralUtility::getFileAbsFileName('typo3temp/var/transient/calendarize/');
+        $cacheFolder = GeneralUtility::getFileAbsFileName('typo3temp/var/transient/checkitcalendarize/');
         if (!\is_dir($cacheFolder)) {
             GeneralUtility::mkdir_deep($cacheFolder);
         }
