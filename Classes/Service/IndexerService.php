@@ -5,12 +5,12 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Service;
+namespace Checkitsedo\Checkitcalendarize\Service;
 
-use HDNET\Calendarize\Register;
-use HDNET\Calendarize\Utility\ArrayUtility;
-use HDNET\Calendarize\Utility\DateTimeUtility;
-use HDNET\Calendarize\Utility\HelperUtility;
+use Checkitsedo\Checkitcalendarize\Register;
+use Checkitsedo\Checkitcalendarize\Utility\ArrayUtility;
+use Checkitsedo\Checkitcalendarize\Utility\DateTimeUtility;
+use Checkitsedo\Checkitcalendarize\Utility\HelperUtility;
 use TYPO3\CMS\Core\Database\Query\Restriction\DeletedRestriction;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Utility\MathUtility;
@@ -24,7 +24,7 @@ class IndexerService extends AbstractService
     /**
      * Index table name.
      */
-    const TABLE_NAME = 'tx_calendarize_domain_model_index';
+    const TABLE_NAME = 'tx_checkitcalendarize_domain_model_index';
 
     /**
      * @var Dispatcher
