@@ -5,12 +5,12 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\ViewHelpers\Uri;
+namespace Checkitsedo\Checkitcalendarize\ViewHelpers\Uri;
 
 /**
  * Uri to the index.
  */
-class IndexViewHelper extends \HDNET\Calendarize\ViewHelpers\Link\IndexViewHelper
+class IndexViewHelper extends \Checkitsedo\Checkitcalendarize\ViewHelpers\Link\IndexViewHelper
 {
     /**
      * Render the uri to the given index.
