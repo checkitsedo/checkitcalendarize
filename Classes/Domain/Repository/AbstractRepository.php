@@ -5,9 +5,9 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Domain\Repository;
+namespace Checkitsedo\Checkitcalendarize\Domain\Repository;
 
-use HDNET\Calendarize\Utility\HelperUtility;
+use Checkitsedo\Checkitcalendarize\Utility\HelperUtility;
 use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 use TYPO3\CMS\Extbase\Persistence\Repository;
 
