@@ -31,7 +31,7 @@ $custom = [
                 'maxitems' => 100,
             ],
         ],
-        'calendarize_info' => [
+        'checkitcalendarize_info' => [
             'label' => 'LLL:EXT:checkitcalendarize/Resources/Private/Language/locallang.xlf:tca.information',
             'config' => [
                 'type' => 'user',
