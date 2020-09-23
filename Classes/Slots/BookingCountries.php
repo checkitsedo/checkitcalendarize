@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Slots;
+namespace Checkitsedo\Checkitcalendarize\Slots;
 
 use SJBR\StaticInfoTables\Domain\Repository\CountryRepository;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
