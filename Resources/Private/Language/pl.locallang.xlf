@@ -3,7 +3,7 @@
 	<file source-language="en" target-language="pl" datatype="plaintext" original="messages" date="2016-04-11T14:12:36Z">
 		<header>
 			<type>database</type>
-			<description>Language file for EXT:calendarize</description>
+			<description>Language file for EXT:checkitcalendarize</description>
 			<authorName>Tim Lochmüller</authorName>
 			<authorEmail>tim@fruit-lab.de</authorEmail>
 			<generator>LFEditor</generator>
@@ -14,7 +14,7 @@
                 <source>All day</source>
                 <target>Cały dzień</target>
             </trans-unit>
-            <trans-unit id="tx_calendarize_domain_model_event.organizer" approved="yes">
+            <trans-unit id="tx_checkitcalendarize_domain_model_event.organizer" approved="yes">
                 <source>Organizer</source>
                 <target>Organizator</target>
             </trans-unit>
@@ -454,163 +454,163 @@
                 <source>Time</source>
                 <target>Godzina</target>
             </trans-unit>
-            <trans-unit id="tx_calendarize_domain_model_caldav" approved="yes">
+            <trans-unit id="tx_checkitcalendarize_domain_model_caldav" approved="yes">
                 <source>CalDav configuration</source>
                 <target>Ustawienia CalDav</target>
             </trans-unit>
-            <trans-unit id="tx_calendarize_domain_model_caldav.event_storage" approved="yes">
+            <trans-unit id="tx_checkitcalendarize_domain_model_caldav.event_storage" approved="yes">
                 <source>Event Storage</source>
                 <target>Magazyn wydarzenia</target>
             </trans-unit>
-            <trans-unit id="tx_calendarize_domain_model_caldav.title" approved="yes">
+            <trans-unit id="tx_checkitcalendarize_domain_model_caldav.title" approved="yes">
                 <source>Title</source>
                 <target>Tytuł</target>
             </trans-unit>
-            <trans-unit id="tx_calendarize_domain_model_caldav.user_storage" approved="yes">
+            <trans-unit id="tx_checkitcalendarize_domain_model_caldav.user_storage" approved="yes">
                 <source>User Storage</source>
                 <target>Magazyn użytkownika</target>
             </trans-unit>
-            <trans-unit id="tx_calendarize_domain_model_configuration" approved="yes">
+            <trans-unit id="tx_checkitcalendarize_domain_model_configuration" approved="yes">
                 <source>Configuration</source>
                 <target>Ustawienia wydarzenia</target>
             </trans-unit>
-            <trans-unit id="tx_calendarize_domain_model_configuration.amount" approved="yes">
+            <trans-unit id="tx_checkitcalendarize_domain_model_configuration.amount" approved="yes">
                 <source>Amount</source>
                 <target>Ilość</target>
             </trans-unit>
-            <trans-unit id="tx_calendarize_domain_model_configuration.counter_amount" approved="yes">
+            <trans-unit id="tx_checkitcalendarize_domain_model_configuration.counter_amount" approved="yes">
                 <source>Amount</source>
                 <target>Ilość</target>
             </trans-unit>
-            <trans-unit id="tx_calendarize_domain_model_configuration.counter_interval" approved="yes">
+            <trans-unit id="tx_checkitcalendarize_domain_model_configuration.counter_interval" approved="yes">
                 <source>Interval</source>
                 <target>Przerwa</target>
             </trans-unit>
-            <trans-unit id="tx_calendarize_domain_model_configuration.day" approved="yes">
+            <trans-unit id="tx_checkitcalendarize_domain_model_configuration.day" approved="yes">
                 <source>Day</source>
                 <target>Dzień</target>
             </trans-unit>
-            <trans-unit id="tx_calendarize_domain_model_configuration.end_date" approved="yes" xml:space="preserve">
+            <trans-unit id="tx_checkitcalendarize_domain_model_configuration.end_date" approved="yes" xml:space="preserve">
                 <source>End date (optionally)</source>
                 <target>Data zakończenia (opcjonalne)</target>
             </trans-unit>
-            <trans-unit id="tx_calendarize_domain_model_configuration.end_time" approved="yes">
+            <trans-unit id="tx_checkitcalendarize_domain_model_configuration.end_time" approved="yes">
                 <source>End time</source>
                 <target>Godzina zakończenia</target>
             </trans-unit>
-            <trans-unit id="tx_calendarize_domain_model_configuration.external_ics_url" approved="yes">
+            <trans-unit id="tx_checkitcalendarize_domain_model_configuration.external_ics_url" approved="yes">
                 <source>External ICS URL</source>
                 <target>Zewnętrzny URL ICS</target>
             </trans-unit>
-            <trans-unit id="tx_calendarize_domain_model_configuration.frequency" approved="yes">
+            <trans-unit id="tx_checkitcalendarize_domain_model_configuration.frequency" approved="yes">
                 <source>Frequency</source>
                 <target>Częstotliwość</target>
             </trans-unit>
-            <trans-unit id="tx_calendarize_domain_model_configuration.groups" approved="yes">
+            <trans-unit id="tx_checkitcalendarize_domain_model_configuration.groups" approved="yes">
                 <source>Groups</source>
                 <target>Grupy</target>
             </trans-unit>
-            <trans-unit id="tx_calendarize_domain_model_configuration.interval" approved="yes">
+            <trans-unit id="tx_checkitcalendarize_domain_model_configuration.interval" approved="yes">
                 <source>Interval</source>
                 <target>Przerwa</target>
             </trans-unit>
-            <trans-unit id="tx_calendarize_domain_model_configuration.recurrence" approved="yes">
+            <trans-unit id="tx_checkitcalendarize_domain_model_configuration.recurrence" approved="yes">
                 <source>Recurrence</source>
                 <target>Powtarzalność</target>
             </trans-unit>
-            <trans-unit id="tx_calendarize_domain_model_configuration.start_date" approved="yes">
+            <trans-unit id="tx_checkitcalendarize_domain_model_configuration.start_date" approved="yes">
                 <source>Start date</source>
                 <target>Data rozpoczęcia</target>
             </trans-unit>
-            <trans-unit id="tx_calendarize_domain_model_configuration.start_time" approved="yes">
+            <trans-unit id="tx_checkitcalendarize_domain_model_configuration.start_time" approved="yes">
                 <source>Start time</source>
                 <target>Godzina rozpoczęcia</target>
             </trans-unit>
-            <trans-unit id="tx_calendarize_domain_model_configuration.till_date" approved="yes">
+            <trans-unit id="tx_checkitcalendarize_domain_model_configuration.till_date" approved="yes">
                 <source>Till date</source>
                 <target>Do daty</target>
             </trans-unit>
-            <trans-unit id="tx_calendarize_domain_model_configuration.type" approved="yes">
+            <trans-unit id="tx_checkitcalendarize_domain_model_configuration.type" approved="yes">
                 <source>Type</source>
                 <target>Typ</target>
             </trans-unit>
-            <trans-unit id="tx_calendarize_domain_model_configurationgroup" approved="yes">
+            <trans-unit id="tx_checkitcalendarize_domain_model_configurationgroup" approved="yes">
                 <source>Configuration group</source>
                 <target>Grupa ustawień wydarzenia</target>
             </trans-unit>
-            <trans-unit id="tx_calendarize_domain_model_configurationgroup.configurations" approved="yes">
+            <trans-unit id="tx_checkitcalendarize_domain_model_configurationgroup.configurations" approved="yes">
                 <source>Configurations</source>
                 <target>Konfiguracja</target>
             </trans-unit>
-            <trans-unit id="tx_calendarize_domain_model_configurationgroup.title" approved="yes">
+            <trans-unit id="tx_checkitcalendarize_domain_model_configurationgroup.title" approved="yes">
                 <source>Title</source>
                 <target>Tytuł</target>
             </trans-unit>
-            <trans-unit id="tx_calendarize_domain_model_event" approved="yes">
+            <trans-unit id="tx_checkitcalendarize_domain_model_event" approved="yes">
                 <source>Event</source>
                 <target>Wydarzenie</target>
             </trans-unit>
-            <trans-unit id="tx_calendarize_domain_model_event.abstract" approved="yes">
+            <trans-unit id="tx_checkitcalendarize_domain_model_event.abstract" approved="yes">
                 <source>Abstract</source>
                 <target>Wprowadzenie</target>
             </trans-unit>
-            <trans-unit id="tx_calendarize_domain_model_event.description" approved="yes">
+            <trans-unit id="tx_checkitcalendarize_domain_model_event.description" approved="yes">
                 <source>Description</source>
                 <target>Opis</target>
             </trans-unit>
-            <trans-unit id="tx_calendarize_domain_model_event.downloads" approved="yes">
+            <trans-unit id="tx_checkitcalendarize_domain_model_event.downloads" approved="yes">
                 <source>Downloads</source>
                 <target>Do pobrania</target>
             </trans-unit>
-            <trans-unit id="tx_calendarize_domain_model_event.images" approved="yes">
+            <trans-unit id="tx_checkitcalendarize_domain_model_event.images" approved="yes">
                 <source>Images</source>
                 <target>Obrazek</target>
             </trans-unit>
-            <trans-unit id="tx_calendarize_domain_model_event.import_id" approved="yes">
+            <trans-unit id="tx_checkitcalendarize_domain_model_event.import_id" approved="yes">
                 <source>Import ID</source>
                 <target>ID importu</target>
             </trans-unit>
-            <trans-unit id="tx_calendarize_domain_model_event.location" approved="yes">
+            <trans-unit id="tx_checkitcalendarize_domain_model_event.location" approved="yes">
                 <source>Location</source>
                 <target>Lokalizacja</target>
             </trans-unit>
-            <trans-unit id="tx_calendarize_domain_model_event.title" approved="yes">
+            <trans-unit id="tx_checkitcalendarize_domain_model_event.title" approved="yes">
                 <source>Title</source>
                 <target>Tytuł</target>
             </trans-unit>
-            <trans-unit id="tx_calendarize_domain_model_index" approved="yes">
+            <trans-unit id="tx_checkitcalendarize_domain_model_index" approved="yes">
                 <source>Index</source>
                 <target>Indeks (Calendarize)</target>
             </trans-unit>
-            <trans-unit id="tx_calendarize_domain_model_index.all_day" approved="yes">
+            <trans-unit id="tx_checkitcalendarize_domain_model_index.all_day" approved="yes">
                 <source>All day</source>
                 <target>Cały dzień</target>
             </trans-unit>
-            <trans-unit id="tx_calendarize_domain_model_index.end_date" approved="yes">
+            <trans-unit id="tx_checkitcalendarize_domain_model_index.end_date" approved="yes">
                 <source>End date</source>
                 <target>Data zakończenia</target>
             </trans-unit>
-            <trans-unit id="tx_calendarize_domain_model_index.end_time" approved="yes">
+            <trans-unit id="tx_checkitcalendarize_domain_model_index.end_time" approved="yes">
                 <source>End time</source>
                 <target>Godzina zakończenia</target>
             </trans-unit>
-            <trans-unit id="tx_calendarize_domain_model_index.foreign_table" approved="yes">
+            <trans-unit id="tx_checkitcalendarize_domain_model_index.foreign_table" approved="yes">
                 <source>Foreign table</source>
                 <target>Obca tabela</target>
             </trans-unit>
-            <trans-unit id="tx_calendarize_domain_model_index.foreign_uid" approved="yes">
+            <trans-unit id="tx_checkitcalendarize_domain_model_index.foreign_uid" approved="yes">
                 <source>Foreign UID</source>
                 <target>Obcy UID</target>
             </trans-unit>
-            <trans-unit id="tx_calendarize_domain_model_index.start_date" approved="yes">
+            <trans-unit id="tx_checkitcalendarize_domain_model_index.start_date" approved="yes">
                 <source>Start date</source>
                 <target>Data rozpoczęcia</target>
             </trans-unit>
-            <trans-unit id="tx_calendarize_domain_model_index.start_time" approved="yes">
+            <trans-unit id="tx_checkitcalendarize_domain_model_index.start_time" approved="yes">
                 <source>Start time</source>
                 <target>Godzina rozpoczęcia</target>
             </trans-unit>
-            <trans-unit id="tx_calendarize_domain_model_index.unique_register_key" approved="yes">
+            <trans-unit id="tx_checkitcalendarize_domain_model_index.unique_register_key" approved="yes">
                 <source>Unique register key</source>
                 <target>Unikatowy klucz rejestru</target>
             </trans-unit>
