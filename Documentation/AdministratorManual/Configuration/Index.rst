@@ -10,7 +10,7 @@ If you leave the detailPid empty and select the monthPid, no events are in the o
 
 For a easy editor workflow you can active the time selection wizard by the given Page TS Config.::
 
-           tx_calendarize.timeSelectionWizard {
+           tx_checkitcalendarize.timeSelectionWizard {
              1 = 9:00
              2 = 12:00
              3 = 18:00
@@ -28,15 +28,15 @@ XML Sitemap for TYPO3 > 9.0
     config {
       xmlSitemap {
         sitemaps {
-          ext_calendarize {
+          ext_checkitcalendarize {
             provider = TYPO3\CMS\Seo\XmlSitemap\RecordsXmlSitemapDataProvider
             config {
-              table = tx_calendarize_domain_model_index
+              table = tx_checkitcalendarize_domain_model_index
               pid = xxxxxx
               url {
                 pageId = xxxxxx
                 fieldToParameterMap {
-                  uid = tx_calendarize_calendar[index]
+                  uid = tx_checkitcalendarize_calendar[index]
                 }
                 useCacheHash = 1
               }
@@ -52,10 +52,10 @@ Breadcrumb menu
 
 To add the calendarize link to the breadcrumb use this user function
 
-  [globalVar = GP:tx_calendarize_calendar|index > 0]
-  # [request.getQueryParams()['tx_calendarize_calendar']['index'] > 0] # TYPO3 >= 9
+  [globalVar = GP:tx_checkitcalendarize_calendar|index > 0]
+  # [request.getQueryParams()['tx_checkitcalendarize_calendar']['index'] > 0] # TYPO3 >= 9
   lib.myBreadcrumbMenu.999 = USER
-  lib.myBreadcrumbMenu.999.userFunc = HDNET\Calendarize\Service\BreadcrumbService->generate
+  lib.myBreadcrumbMenu.999.userFunc = Checkitsedo\Checkitcalendarize\Service\BreadcrumbService->generate
   lib.myBreadcrumbMenu.999.doNotLinkIt = 1 # (enable or disable the link => 0)
   lib.myBreadcrumbMenu.999.wrap = <li>|</li>
   [end]
