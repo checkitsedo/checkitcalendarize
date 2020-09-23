@@ -5,12 +5,12 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\ViewHelpers\Uri;
+namespace Checkitsedo\Checkitcalendarize\ViewHelpers\Uri;
 
 /**
  * Uri to the year.
  */
-class YearViewHelper extends \HDNET\Calendarize\ViewHelpers\Link\YearViewHelper
+class YearViewHelper extends \Checkitsedo\Checkitcalendarize\ViewHelpers\Link\YearViewHelper
 {
     /**
      * Render the uri to the given year.
