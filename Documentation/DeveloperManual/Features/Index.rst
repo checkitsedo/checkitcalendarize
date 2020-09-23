@@ -1,7 +1,7 @@
 Features
 --------
 
-Your own events can use same features directly of the calendarize integration. The features are in the folder EXT:calendarize/Classes/Features/
+Your own events can use same features directly of the calendarize integration. The features are in the folder EXT:checkitcalendarize/Classes/Features/
 The following features are currelty in the calendarize extension:
 
 - BookingInterface - The event is bookable by the internal booking process
