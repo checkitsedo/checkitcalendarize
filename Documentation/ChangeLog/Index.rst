@@ -2,4 +2,4 @@ ChangeLog
 ---------
 
 There is no separated change list. Please take a look into:
-https://github.com/lochmueller/calendarize/commits/master
+https://github.com/checkitsedo/checkitcalendarize/commits/master
