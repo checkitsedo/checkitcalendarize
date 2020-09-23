@@ -6,10 +6,10 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Service;
+namespace Checkitsedo\Checkitcalendarize\Service;
 
-use HDNET\Calendarize\Register;
-use HDNET\Calendarize\Utility\HelperUtility;
+use Checkitsedo\Checkitcalendarize\Register;
+use Checkitsedo\Checkitcalendarize\Utility\HelperUtility;
 use TYPO3\CMS\Backend\Utility\BackendUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
@@ -36,7 +36,7 @@ class IndexPreparationService
         }
 
         $register = Register::getRegister();
-        $fieldName = isset($register[$configurationKey]['fieldName']) ? $register[$configurationKey]['fieldName'] : 'calendarize';
+        $fieldName = isset($register[$configurationKey]['fieldName']) ? $register[$configurationKey]['fieldName'] : 'checkitcalendarize';
         $configurations = GeneralUtility::intExplode(',', $rawRecord[$fieldName], true);
 
         $transPointer = $GLOBALS['TCA'][$tableName]['ctrl']['transOrigPointerField'] ?? false; // e.g. l10n_parent
