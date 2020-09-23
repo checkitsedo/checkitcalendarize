@@ -5,10 +5,10 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Hooks;
+namespace Checkitsedo\Checkitcalendarize\Hooks;
 
 use HDNET\Autoloader\Annotation\Hook;
-use HDNET\Calendarize\Service\Url\RealUrl;
+use Checkitsedo\Checkitcalendarize\Service\Url\RealUrl;
 
 /**
  * Realurl configuration.
@@ -24,20 +24,20 @@ class RealurlConfiguration extends AbstractHook
      * @return array
      * @Hook("TYPO3_CONF_VARS|SC_OPTIONS|ext/realurl/class.tx_realurl_autoconfgen.php|extensionConfiguration")
      */
-    public function addCalendarizeConfiguration($params, &$pObj)
+    public function addCheckitcalendarizeConfiguration($params, &$pObj)
     {
         return \array_merge_recursive($params['config'], [
             'postVarSets' => [
                 '_DEFAULT' => [
                     'event' => [
                         [
-                            'GETvar' => 'tx_calendarize_calendar[index]',
+                            'GETvar' => 'tx_checkitcalendarize_calendar[index]',
                             'userFunc' => RealUrl::class . '->convert',
                         ],
                     ],
                     'event-page' => [
                         [
-                            'GETvar' => 'tx_calendarize_calendar[@widget_0][currentPage]',
+                            'GETvar' => 'tx_checkitcalendarize_calendar[@widget_0][currentPage]',
                         ],
                     ],
                 ],
