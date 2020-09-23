@@ -5,14 +5,14 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Hooks;
+namespace Checkitsedo\Checkitcalendarize\Hooks;
 
 use HDNET\Autoloader\Annotation\Hook;
 use HDNET\Autoloader\Utility\IconUtility;
-use HDNET\Calendarize\Service\ContentElementLayoutService;
-use HDNET\Calendarize\Service\FlexFormService;
-use HDNET\Calendarize\Utility\HelperUtility;
-use HDNET\Calendarize\Utility\TranslateUtility;
+use Checkitsedo\Checkitcalendarize\Service\ContentElementLayoutService;
+use Checkitsedo\Checkitcalendarize\Service\FlexFormService;
+use Checkitsedo\Checkitcalendarize\Utility\HelperUtility;
+use Checkitsedo\Checkitcalendarize\Utility\TranslateUtility;
 use TYPO3\CMS\Backend\Utility\BackendUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Utility\PathUtility;
@@ -44,11 +44,11 @@ class CmsLayout extends AbstractHook
      * @param array $params Parameters to the hook
      *
      * @return string Information about pi1 plugin
-     * @Hook("TYPO3_CONF_VARS|SC_OPTIONS|cms/layout/class.tx_cms_layout.php|list_type_Info|calendarize_calendar")
+     * @Hook("TYPO3_CONF_VARS|SC_OPTIONS|cms/layout/class.tx_cms_layout.php|list_type_Info|checkitcalendarize_calendar")
      */
     public function getExtensionSummary(array $params)
     {
-        if ('calendarize_calendar' !== $params['row']['list_type']) {
+        if ('checkitcalendarize_calendar' !== $params['row']['list_type']) {
             return '';
         }
 
@@ -58,7 +58,7 @@ class CmsLayout extends AbstractHook
             return '';
         }
 
-        $extensionIcon = IconUtility::getByExtensionKey('calendarize', true);
+        $extensionIcon = IconUtility::getByExtensionKey('checkitcalendarize', true);
         $extensionIconUsage = PathUtility::getAbsoluteWebPath(GeneralUtility::getFileAbsFileName($extensionIcon));
         $this->layoutService = GeneralUtility::makeInstance(ContentElementLayoutService::class);
         $this->layoutService->setTitle('<img src="' . $extensionIconUsage . '" width="32" height="32" /> Calendarize');
@@ -76,7 +76,7 @@ class CmsLayout extends AbstractHook
 
         $pluginConfiguration = (int)$this->flexFormService->get('settings.pluginConfiguration', 'main');
         if ($pluginConfiguration) {
-            $table = 'tx_calendarize_domain_model_pluginconfiguration';
+            $table = 'tx_checkitcalendarize_domain_model_pluginconfiguration';
 
             $row = HelperUtility::getDatabaseConnection($table)->select(
                 ['*'],
@@ -84,7 +84,7 @@ class CmsLayout extends AbstractHook
                 ['uid' => $pluginConfiguration]
             )->fetch();
             $this->layoutService->addRow(
-                TranslateUtility::get('tx_calendarize_domain_model_pluginconfiguration'),
+                TranslateUtility::get('tx_checkitcalendarize_domain_model_pluginconfiguration'),
                 BackendUtility::getRecordTitle($table, $row)
             );
         }
