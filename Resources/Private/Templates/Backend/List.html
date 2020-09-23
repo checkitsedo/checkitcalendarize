@@ -1,1 +1,63 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+			xmlns:be="http://typo3.org/ns/TYPO3/CMS/Backend/ViewHelpers"
+			xmlns:core="http://typo3.org/ns/TYPO3/CMS/Core/ViewHelpers"
+			xmlns:c="http://typo3.org/ns/HDNET/Calendarize/ViewHelpers"
+			data-namespace-typo3-fluid="true">
 
+<f:layout name="Backend"/>
+
+<f:section name="Content">
+	<h1>Calendarize</h1>
+
+	<f:flashMessages/>
+
+	<fieldset class="form-group border">
+		<f:form action="option" object="{options}" name="options">
+
+			<f:comment>
+			<div class="form-group">
+				<label for="sorting">Sorting</label>
+				<f:form.select options="{start_date: 'start_date'}" class="form-control" id="sorting" property="sorting" />
+			</div>
+			</f:comment>
+
+			<div class="form-group">
+				<label for="pid">PID</label>
+				<f:form.select prependOptionLabel="All" prependOptionValue="-1" options="{pids}" class="form-control" id="pid" property="pid" />
+			</div>
+
+			<div class="form-group">
+				<label for="direction">Direction</label>
+				<f:form.select options="{asc: 'ASC', desc: 'DESC'}" class="form-control" id="direction" property="direction" />
+			</div>
+
+			<f:form.submit value="Save options" class="btn btn-secondary" />
+		</f:form>
+	</fieldset>
+
+	<fieldset class="form-group">
+		<f:if condition="{typeLocations}">
+			<f:then>
+				<p>
+					<f:for each="{typeLocations}" key="table" as="pids">
+						<f:for each="{pids}" key="pid" as="value">
+							<be:link.newRecord class="btn btn-primary" table="{table}" pid="{pid}"
+																 returnUrl="{f:be.uri(route: 'web_CalendarizeCalendarize')}">
+								<core:icon identifier="actions-document-new"/>
+								{value} on "
+								<c:backend.pageTitle uid="{pid}"/>
+								" (#{pid})
+							</be:link.newRecord>
+						</f:for>
+					</f:for>
+				</p>
+			</f:then>
+			<f:else>
+				<p>Note: If you create first events in Storage folder, the create buttons will appear in this location</p>
+			</f:else>
+		</f:if>
+	</fieldset>
+
+	<f:render partial="Backend/List" arguments="{_all}"/>
+</f:section>
+</html>
