@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\ViewHelpers\Loop;
+namespace Checkitsedo\Checkitcalendarize\ViewHelpers\Loop;
 
 /**
  * Months in year view Helper.
