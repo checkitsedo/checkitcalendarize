@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Service;
+namespace Checkitsedo\Checkitcalendarize\Service;
 
 /**
  * Layout for BE content elements.
