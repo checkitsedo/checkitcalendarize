@@ -4,10 +4,10 @@ services:
     autoconfigure: true
     public: false
 
-  HDNET\Calendarize\:
+  Checkitsedo\Checkitcalendarize\:
     resource: '../Classes/*'
 
-  HDNET\Calendarize\Listener\CalendarizeField:
+  Checkitsedo\Checkitcalendarize\Listener\CalendarizeField:
     tags:
       - name: event.listener
         identifier: 'calendarizeField'
