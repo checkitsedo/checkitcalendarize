@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Validation\Validator;
+namespace Checkitsedo\Checkitcalendarize\Validation\Validator;
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Validation\Validator\AbstractValidator;
