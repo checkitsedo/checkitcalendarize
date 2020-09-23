@@ -1,0 +1,26 @@
+# cat=basic/enable; type=boolean; label=Disable default event:Disable the default event table in the list view and in the registration
+disableDefaultEvent = 0
+
+# cat=basic/int+; type=int+; label=Frequency limit per item:Set the maximum level of iteration of frequency events to avoid endless indexing
+frequencyLimitPerItem = 300
+
+# cat=basic/int+; type=options[disabled=0,5m=300,10m=600,15m=900,30m=1800,60m=3600]; label=Time shift:Set the value to shift the time even more than the core (core default is 60 seconds). If you increase the time, the selection of content and data is rounded to the given time period (enableFields and also calendarize times). This will speed up the Query cache, because the SELECT queries are more often the same.
+timeShift = 0
+
+# cat=basic/enable; type=boolean; label=Disable date in speaking URL:Disable the date in the speaking URL generation
+disableDateInSpeakingUrl = 0
+
+# cat=basic/enable; type=boolean; label=Add index in speaking URL:Add the Index UID at the end of the generated URI of the even to avoid conflicts
+addIndexInSpeakingUrl = 0
+
+# cat=basic/int+; type=int+; label=Till Days:Maximum of (future) days for which indices should be created (per default based on start date, if till days is relative is true then based on the current day). The frequency limit per item is still active, make sure to set the value high enough. It is also possible to leave this blank and set the value per configuration item.
+tillDays =
+
+# cat=basic/int+; type=boolean; label=Till Days Relative:Defines if till days and till days past are based on the start date or based on the current day. It is also possible to leave this blank and set the value per configuration item.
+tillDaysRelative =
+
+# cat=basic/int+; type=int+; label=Till Days Past:Maximum of (past) days for which indices should be created (does only make sense if till days relative is enabled). The frequency limit per item is still active, make sure to set the value high enough. It is also possible to leave this blank and set the value per configuration item.
+tillDaysPast =
+
+# cat=basic/enable; type=boolean; label=Respect times in time frame constraints: Per default IndexRepository->addTimeFrameConstraints() only checks start_date and end_date. If you want the actual times to be respected (e.g. if settings.overrideStartRelative is set to 'now') enable this option.
+respectTimesInTimeFrameConstraints = 0
