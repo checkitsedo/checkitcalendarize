@@ -6,16 +6,18 @@ Calendarize - Flexible TYPO3 Calendar
       |today|
 
 :Classification:
-      calendarize
+      checkitcalendarize
 
 :Keywords:
       forEditors, forAdmins, forBeginners, forIntermediates
 
 :Author:
       Tim Lochmüller
+      Dominik Senti
 
 :Email:
       tim@fruit-lab.de
+      dominik@senti.lu
 
 :Language:
       en
