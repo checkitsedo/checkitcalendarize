@@ -1,11 +1,11 @@
 <?php
 
 declare(strict_types=1);
-namespace HDNET\Calendarize\Form\Element;
+namespace Checkitsedo\Checkitcalendarize\Form\Element;
 
-use HDNET\Calendarize\Service\IndexerService;
-use HDNET\Calendarize\Utility\DateTimeUtility;
-use HDNET\Calendarize\Utility\TranslateUtility;
+use Checkitsedo\Checkitcalendarize\Service\IndexerService;
+use Checkitsedo\Checkitcalendarize\Utility\DateTimeUtility;
+use Checkitsedo\Checkitcalendarize\Utility\TranslateUtility;
 use TYPO3\CMS\Backend\Form\Element\AbstractFormElement;
 use TYPO3\CMS\Backend\Utility\BackendUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
