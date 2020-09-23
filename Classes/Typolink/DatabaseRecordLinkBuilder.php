@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Typolink;
+namespace Checkitsedo\Checkitcalendarize\Typolink;
 
-use HDNET\Calendarize\Domain\Repository\IndexRepository;
-use HDNET\Calendarize\Register;
+use Checkitsedo\Checkitcalendarize\Domain\Repository\IndexRepository;
+use Checkitsedo\Checkitcalendarize\Register;
 use TYPO3\CMS\Core\Utility\ClassNamingUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\DomainObject\DomainObjectInterface;
@@ -23,14 +23,14 @@ class DatabaseRecordLinkBuilder extends \TYPO3\CMS\Frontend\Typolink\DatabaseRec
     {
         if (isset($linkDetails['identifier']) && \in_array($linkDetails['identifier'], $this->getEventTables(), true)) {
             $eventId = $linkDetails['uid'];
-            $defaultPid = (int)($GLOBALS['TSFE']->tmpl->setup['plugin.']['tx_calendarize.']['settings.']['defaultDetailPid'] ?? 0);
+            $defaultPid = (int)($GLOBALS['TSFE']->tmpl->setup['plugin.']['tx_checkitcalendarize.']['settings.']['defaultDetailPid'] ?? 0);
             if ($defaultPid <= 0) {
                 throw new \Exception('You have to configure calendarize:defaultDetailPid to use the linkhandler function');
             }
 
             $typoScriptConfiguration = [
                 'parameter' => $defaultPid,
-                'additionalParams' => '&tx_calendarize_calendar[index]=' . $this->getIndexForEventUid($linkDetails['identifier'], $eventId),
+                'additionalParams' => '&tx_checkitcalendarize_calendar[index]=' . $this->getIndexForEventUid($linkDetails['identifier'], $eventId),
             ];
 
             $localContentObjectRenderer = GeneralUtility::makeInstance(ContentObjectRenderer::class);
