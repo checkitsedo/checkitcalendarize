@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Service;
+namespace Checkitsedo\Checkitcalendarize\Service;
 
 use TYPO3\CMS\Backend\Utility\BackendUtility;
 use TYPO3\CMS\Core\Imaging\Icon;
@@ -41,7 +41,7 @@ class TimeSelectionWizard extends AbstractService
 
         if (TYPO3_MODE !== 'FE') {
             $pageRenderer = GeneralUtility::makeInstance(PageRenderer::class);
-            $pageRenderer->loadRequireJsModule('TYPO3/CMS/Calendarize/TimeSelection');
+            $pageRenderer->loadRequireJsModule('TYPO3/CMS/Checkitcalendarize/TimeSelection');
         }
 
         $iconFactory = GeneralUtility::makeInstance(IconFactory::class);
@@ -89,12 +89,12 @@ class TimeSelectionWizard extends AbstractService
     {
         $times = [];
         $pagesTsConfig = BackendUtility::getPagesTSconfig($pageUid);
-        if (isset($pagesTsConfig['tx_calendarize.']['timeSelectionWizard.']) &&
-            \is_array($pagesTsConfig['tx_calendarize.']['timeSelectionWizard.'])
+        if (isset($pagesTsConfig['tx_checkitcalendarize.']['timeSelectionWizard.']) &&
+            \is_array($pagesTsConfig['tx_checkitcalendarize.']['timeSelectionWizard.'])
         ) {
             $times = \array_combine(
-                $pagesTsConfig['tx_calendarize.']['timeSelectionWizard.'],
-                $pagesTsConfig['tx_calendarize.']['timeSelectionWizard.']
+                $pagesTsConfig['tx_checkitcalendarize.']['timeSelectionWizard.'],
+                $pagesTsConfig['tx_checkitcalendarize.']['timeSelectionWizard.']
             );
         }
 
