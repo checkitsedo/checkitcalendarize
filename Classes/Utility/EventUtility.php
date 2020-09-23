@@ -5,9 +5,9 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Utility;
+namespace Checkitsedo\Checkitcalendarize\Utility;
 
-use HDNET\Calendarize\Domain\Model\PluginConfiguration;
+use Checkitsedo\Checkitcalendarize\Domain\Model\PluginConfiguration;
 
 /**
  * Event utility.
