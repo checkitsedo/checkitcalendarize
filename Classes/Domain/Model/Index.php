@@ -5,15 +5,15 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Domain\Model;
+namespace Checkitsedo\Checkitcalendarize\Domain\Model;
 
 use HDNET\Autoloader\Annotation\DatabaseField;
 use HDNET\Autoloader\Annotation\DatabaseTable;
 use HDNET\Autoloader\Annotation\SmartExclude;
-use HDNET\Calendarize\Exception;
-use HDNET\Calendarize\Register;
-use HDNET\Calendarize\Utility\DateTimeUtility;
-use HDNET\Calendarize\Utility\EventUtility;
+use Checkitsedo\Checkitcalendarize\Exception;
+use Checkitsedo\Checkitcalendarize\Register;
+use Checkitsedo\Checkitcalendarize\Utility\DateTimeUtility;
+use Checkitsedo\Checkitcalendarize\Utility\EventUtility;
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 
 /**
