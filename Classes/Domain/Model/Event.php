@@ -5,15 +5,15 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Domain\Model;
+namespace Checkitsedo\Checkitcalendarize\Domain\Model;
 
 use HDNET\Autoloader\Annotation\DatabaseField;
 use HDNET\Autoloader\Annotation\DatabaseTable;
 use HDNET\Autoloader\Annotation\EnableRichText;
 use HDNET\Autoloader\Annotation\SmartExclude;
-use HDNET\Calendarize\Features\FeedInterface;
-use HDNET\Calendarize\Features\KeSearchIndexInterface;
-use HDNET\Calendarize\Features\SpeakingUrlInterface;
+use Checkitsedo\Checkitcalendarize\Features\FeedInterface;
+use Checkitsedo\Checkitcalendarize\Features\KeSearchIndexInterface;
+use Checkitsedo\Checkitcalendarize\Features\SpeakingUrlInterface;
 use TYPO3\CMS\Extbase\Domain\Model\Category;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 
@@ -112,9 +112,9 @@ class Event extends AbstractModel implements FeedInterface, SpeakingUrlInterface
      * Relation field. It is just used by the importer of the default events.
      * You do not need this field, if you don't use the default Event.
      *
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\HDNET\Calendarize\Domain\Model\Configuration>
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Checkitsedo\Checkitcalendarize\Domain\Model\Configuration>
      */
-    protected $calendarize;
+    protected $checkitcalendarize;
 
     /**
      * Categories.
@@ -135,7 +135,7 @@ class Event extends AbstractModel implements FeedInterface, SpeakingUrlInterface
      */
     public function __construct()
     {
-        $this->calendarize = new ObjectStorage();
+        $this->checkitcalendarize = new ObjectStorage();
         $this->images = new ObjectStorage();
         $this->downloads = new ObjectStorage();
         $this->categories = new ObjectStorage();
@@ -262,33 +262,33 @@ class Event extends AbstractModel implements FeedInterface, SpeakingUrlInterface
     }
 
     /**
-     * Get calendarize.
+     * Get checkitcalendarize.
      *
      * @return ObjectStorage
      */
-    public function getCalendarize()
+    public function getCheckitcalendarize()
     {
-        return $this->calendarize;
+        return $this->checkitcalendarize;
     }
 
     /**
-     * Set calendarize.
+     * Set checkitcalendarize.
      *
-     * @param ObjectStorage $calendarize
+     * @param ObjectStorage $checkitcalendarize
      */
-    public function setCalendarize($calendarize)
+    public function setCheckitcalendarize($checkitcalendarize)
     {
-        $this->calendarize = $calendarize;
+        $this->checkitcalendarize = $checkitcalendarize;
     }
 
     /**
-     * Add one calendarize configuration.
+     * Add one checkitcalendarize configuration.
      *
-     * @param Configuration $calendarize
+     * @param Configuration $checkitcalendarize
      */
-    public function addCalendarize($calendarize)
+    public function addCheckitcalendarize($checkitcalendarize)
     {
-        $this->calendarize->attach($calendarize);
+        $this->checkitcalendarize->attach($checkitcalendarize);
     }
 
     /**
