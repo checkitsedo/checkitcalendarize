@@ -3,7 +3,7 @@
 	<file source-language="en" target-language="es" datatype="plaintext" original="messages" date="2016-04-11T14:06:26Z">
 		<header>
 			<type>database</type>
-			<description>Language file for EXT:calendarize</description>
+			<description>Language file for EXT:checkitcalendarize</description>
 			<authorName>Tim Lochmüller</authorName>
 			<authorEmail>tim@fruit-lab.de</authorEmail>
 			<generator>LFEditor</generator>
