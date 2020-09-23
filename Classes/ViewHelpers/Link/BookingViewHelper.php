@@ -5,9 +5,9 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\ViewHelpers\Link;
+namespace Checkitsedo\Checkitcalendarize\ViewHelpers\Link;
 
-use HDNET\Calendarize\Domain\Model\Index;
+use Checkitsedo\Checkitcalendarize\Domain\Model\Index;
 
 /**
  * Link to the booking page.
@@ -37,7 +37,7 @@ class BookingViewHelper extends AbstractLinkViewHelper
             return $this->renderChildren();
         }
         $additionalParams = [
-            'tx_calendarize_calendar' => [
+            'tx_checkitcalendarize_calendar' => [
                 'index' => $this->arguments['index']->getUid(),
             ],
         ];
