@@ -5,13 +5,13 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Slots;
+namespace Checkitsedo\Checkitcalendarize\Slots;
 
-use HDNET\Calendarize\Command\ImportCommandController;
-use HDNET\Calendarize\Domain\Model\Configuration;
-use HDNET\Calendarize\Domain\Model\Event;
-use HDNET\Calendarize\Domain\Repository\EventRepository;
-use HDNET\Calendarize\Utility\DateTimeUtility;
+use Checkitsedo\Checkitcalendarize\Command\ImportCommandController;
+use Checkitsedo\Checkitcalendarize\Domain\Model\Configuration;
+use Checkitsedo\Checkitcalendarize\Domain\Model\Event;
+use Checkitsedo\Checkitcalendarize\Domain\Repository\EventRepository;
+use Checkitsedo\Checkitcalendarize\Utility\DateTimeUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Persistence\Generic\PersistenceManager;
 
@@ -23,7 +23,7 @@ class EventImport
     /**
      * Event repository.
      *
-     * @var \HDNET\Calendarize\Domain\Repository\EventRepository
+     * @var \Checkitsedo\Checkitcalendarize\Domain\Repository\EventRepository
      */
     protected $eventRepository;
 
