@@ -1,4 +1,4 @@
-{namespace c=HDNET\Calendarize\ViewHelpers}<f:if condition="{index}">
+{namespace c=Checkitsedo\Checkitcalendarize\ViewHelpers}<f:if condition="{index}">
 	<item>
 		<guid isPermaLink="false">calendarize-{index.uid}</guid>
 		<pubDate><f:format.date format="{f:if(condition: index.allDay, then: '%Y%m%d', else: '%Y%m%dT%H%M%S%Z')}">{index.startDateComplete}</f:format.date></pubDate>
