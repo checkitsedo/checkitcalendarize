@@ -1,5 +1,5 @@
 {
-	"name": "lochmueller/calendarize",
+	"name": "checkitsedo/checkitcalendarize",
 	"type": "typo3-cms-extension",
 	"description": "Create a structure for timely controlled tables (e.g. events) and one plugin for the different output of calendar views (list, detail, month, year, day, week...). The extension is shipped with one default event table, but you can also 'calendarize' your own table/model. It is completely independent and configurable! Use your own models as event items in this calender. Development on https://github.com/lochmueller/calendarize",
 	"repositories": [
@@ -10,13 +10,13 @@
 	],
 	"autoload": {
 		"psr-4": {
-			"HDNET\\Calendarize\\": "Classes/",
+			"Checkitsedo\\Checkitcalendarize\\": "Classes/",
 			"JMBTechnologyLimited\\ICalDissect\\": "Resources/Private/Php/ICalDissect/src/JMBTechnologyLimited/ICalDissect/"
 		}
 	},
 	"autoload-dev": {
 		"psr-4": {
-			"HDNET\\Calendarize\\Tests\\": "Tests"
+			"Checkitsedo\\Checkitcalendarize\\Tests\\": "Tests"
 		}
 	},
 	"keywords": [
@@ -43,10 +43,10 @@
 	"replace": {
 		"typo3-ter/calendarize": "self.version"
 	},
-	"homepage": "https://github.com/lochmueller/calendarize",
+	"homepage": "https://github.com/checkitsedo/checkitcalendarize",
 	"license": "GPL-2.0-or-later",
 	"support": {
-		"issues": "https://github.com/lochmueller/calendarize/issues"
+		"issues": "https://github.com/checkitsedo/checkitcalendarize/issues"
 	},
 	"suggest": {
 		"cabi/microformat": "Output of microformat information for better Google Search Result User Experience"
