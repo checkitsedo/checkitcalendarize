@@ -5,12 +5,12 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Updates;
+namespace Checkitsedo\Checkitcalendarize\Updates;
 
 use HDNET\Autoloader\Annotation\SignalClass;
 use HDNET\Autoloader\Annotation\SignalName;
-use HDNET\Calendarize\Service\IndexerService;
-use HDNET\Calendarize\Utility\HelperUtility;
+use Checkitsedo\Checkitcalendarize\Service\IndexerService;
+use Checkitsedo\Checkitcalendarize\Utility\HelperUtility;
 use TYPO3\CMS\Core\Database\Query\Restriction\DeletedRestriction;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
@@ -23,7 +23,7 @@ use TYPO3\CMS\Install\Updates\UpgradeWizardInterface;
  * If using the slots please use the m with func_get_args!
  * Example:
  * /**
- *  * @SignalClass \HDNET\Calendarize\Updates\CalMigrationUpdate
+ *  * @SignalClass \Checkitsedo\Checkitcalendarize\Updates\CalMigrationUpdate
  *  * @SignalName getCalendarizeEventUid
  *  *
  *
@@ -52,17 +52,17 @@ class CalMigrationUpdate implements UpgradeWizardInterface
     /**
      * Event table.
      */
-    const EVENT_TABLE = 'tx_calendarize_domain_model_event';
+    const EVENT_TABLE = 'tx_checkitcalendarize_domain_model_event';
 
     /**
      * Configuration table.
      */
-    const CONFIGURATION_TABLE = 'tx_calendarize_domain_model_configuration';
+    const CONFIGURATION_TABLE = 'tx_checkitcalendarize_domain_model_configuration';
 
     /**
      * ConfigurationGroup table.
      */
-    const CONFIGURATION_GROUP_TABLE = 'tx_calendarize_domain_model_configurationgroup';
+    const CONFIGURATION_GROUP_TABLE = 'tx_checkitcalendarize_domain_model_configurationgroup';
 
     /**
      * The human-readable title of the upgrade wizard.
@@ -88,7 +88,7 @@ class CalMigrationUpdate implements UpgradeWizardInterface
             return false;
         }
         $description = 'There ' . ($count > 1 ? 'are ' . $count : 'is ' . $count) . ' non migrated EXT:cal event
-        ' . ($count > 1 ? 's' : '') . '. Run the update process to migrate the events to EXT:calendarize events.';
+        ' . ($count > 1 ? 's' : '') . '. Run the update process to migrate the events to EXT:checkitcalendarize events.';
 
         return true;
     }
@@ -303,7 +303,7 @@ class CalMigrationUpdate implements UpgradeWizardInterface
     }
 
     /**
-     * Migrate the 'sys_file_reference' entries from 'tx_cal_event' to 'tx_calendarize_domain_model_event'.
+     * Migrate the 'sys_file_reference' entries from 'tx_cal_event' to 'tx_checkitcalendarize_domain_model_event'.
      * Mark the imported entries with the import-id.
      *
      * @param       $calIds
@@ -488,7 +488,7 @@ class CalMigrationUpdate implements UpgradeWizardInterface
             return false;
         }
 
-        $event['calendarize'] = $this->addValueToCsv($event['calendarize'], $configurationId);
+        $event['checkitcalendarize'] = $this->addValueToCsv($event['checkitcalendarize'], $configurationId);
 
         return $this->updateEvent($event['uid'], $event, $dbQueries, $customMessages);
     }
@@ -596,7 +596,7 @@ class CalMigrationUpdate implements UpgradeWizardInterface
                 $q->expr()->andX(
                     $q->expr()->eq('type', 'group'),
                     $q->expr()->eq('handling', 'exclude'),
-                    $q->expr()->in('uid', $variables['event']['calendarize'])
+                    $q->expr()->in('uid', $variables['event']['checkitcalendarize'])
                 )
             );
 
