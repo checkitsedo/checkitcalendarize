@@ -1,4 +1,4 @@
-# EXT:calendarize
+# EXT:checkitcalendarize
 
 [![Latest Stable Version](https://poser.pugx.org/lochmueller/calendarize/v/stable)](https://packagist.org/packages/lochmueller/calendarize)
 [![Total Downloads](https://poser.pugx.org/lochmueller/calendarize/downloads)](https://packagist.org/packages/lochmueller/calendarize)
