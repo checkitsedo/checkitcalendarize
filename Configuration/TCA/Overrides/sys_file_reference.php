@@ -5,7 +5,7 @@ declare(strict_types=1);
 use HDNET\Autoloader\Utility\ArrayUtility;
 use HDNET\Autoloader\Utility\ModelUtility;
 
-$GLOBALS['TCA']['sys_file_reference'] = ModelUtility::getTcaOverrideInformation('calendarize', 'sys_file_reference');
+$GLOBALS['TCA']['sys_file_reference'] = ModelUtility::getTcaOverrideInformation('checkitcalendarize', 'sys_file_reference');
 
 $custom = [];
 
