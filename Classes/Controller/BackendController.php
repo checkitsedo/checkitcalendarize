@@ -5,9 +5,9 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Controller;
+namespace Checkitsedo\Checkitcalendarize\Controller;
 
-use HDNET\Calendarize\Domain\Model\Request\OptionRequest;
+use Checkitsedo\Checkitcalendarize\Domain\Model\Request\OptionRequest;
 use TYPO3\CMS\Core\Messaging\FlashMessage;
 
 /**
@@ -38,11 +38,11 @@ class BackendController extends AbstractController
     /**
      * Option action.
      *
-     * @param \HDNET\Calendarize\Domain\Model\Request\OptionRequest $options
+     * @param \Checkitsedo\Checkitcalendarize\Domain\Model\Request\OptionRequest $options
      */
     public function optionAction(OptionRequest $options)
     {
-        $GLOBALS['BE_USER']->setAndSaveSessionData('calendarize_be', \serialize($options));
+        $GLOBALS['BE_USER']->setAndSaveSessionData('checkitcalendarize_be', \serialize($options));
         $this->addFlashMessage('Options saved', '', FlashMessage::OK, true);
         $this->forward('list');
     }
@@ -66,7 +66,7 @@ class BackendController extends AbstractController
     protected function getOptions()
     {
         try {
-            $info = $GLOBALS['BE_USER']->getSessionData('calendarize_be');
+            $info = $GLOBALS['BE_USER']->getSessionData('checkitcalendarize_be');
             $object = @\unserialize((string)$info);
             if ($object instanceof OptionRequest) {
                 return $object;
