@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Command;
+namespace Checkitsedo\Checkitcalendarize\Command;
 
 use Symfony\Component\Console\Command\Command;
 use TYPO3\CMS\Core\Messaging\FlashMessage;
