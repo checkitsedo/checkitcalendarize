@@ -4,33 +4,33 @@ declare(strict_types=1);
 
 use HDNET\Autoloader\Utility\ArrayUtility;
 use HDNET\Autoloader\Utility\ModelUtility;
-use HDNET\Calendarize\Domain\Model\Configuration;
-use HDNET\Calendarize\Service\TcaService;
-use HDNET\Calendarize\Service\TimeSelectionWizard;
-use HDNET\Calendarize\Utility\TranslateUtility;
+use Checkitsedo\Checkitcalendarize\Domain\Model\Configuration;
+use Checkitsedo\Checkitcalendarize\Service\TcaService;
+use Checkitsedo\Checkitcalendarize\Service\TimeSelectionWizard;
+use Checkitsedo\Checkitcalendarize\Utility\TranslateUtility;
 
 $base = ModelUtility::getTcaInformation(Configuration::class);
 
 $timeType = \str_replace(
-    '--palette--;LLL:EXT:hdnet/Resources/Private/Language/locallang.xlf:language;language',
+    '--palette--;LLL:EXT:checkitcalendarize/Resources/Private/Language/locallang.xlf:language;language',
     '',
     $base['types']['1']['showitem']
 );
 $timeType = \str_replace(
     ',frequency',
-    ',--div--;LLL:EXT:calendarize/Resources/Private/Language/locallang.xlf:tx_calendarize_domain_model_configuration.frequency,frequency',
+    ',--div--;LLL:EXT:checkitcalendarize/Resources/Private/Language/locallang.xlf:tx_checkitcalendarize_domain_model_configuration.frequency,frequency',
     $timeType
 );
 $timeType = \str_replace(',external_ics_url', '', $timeType);
 $timeType = \str_replace(',groups', '', $timeType);
 $timeType = \str_replace(
     ',start_date,end_date,end_date_dynamic',
-    ',--palette--;LLL:EXT:calendarize/Resources/Private/Language/locallang.xlf:date;date',
+    ',--palette--;LLL:EXT:checkitcalendarize/Resources/Private/Language/locallang.xlf:date;date',
     $timeType
 );
 $timeType = \str_replace(
     ',start_time,end_time,all_day,open_end_time',
-    ',--palette--;LLL:EXT:calendarize/Resources/Private/Language/locallang.xlf:time;time',
+    ',--palette--;LLL:EXT:checkitcalendarize/Resources/Private/Language/locallang.xlf:time;time',
     $timeType
 );
 $timeType = \str_replace(
@@ -40,11 +40,11 @@ $timeType = \str_replace(
 );
 $timeType = \str_replace(
     ',counter_interval,recurrence,day',
-    ',--palette--;LLL:EXT:calendarize/Resources/Private/Language/locallang.xlf:frequency_configuration;frequency_configuration',
+    ',--palette--;LLL:EXT:checkitcalendarize/Resources/Private/Language/locallang.xlf:frequency_configuration;frequency_configuration',
     $timeType
 );
 
-$baseConfiguration = '--palette--;LLL:EXT:calendarize/Resources/Private/Language/locallang.xlf:base_configuration;base';
+$baseConfiguration = '--palette--;LLL:EXT:checkitcalendarize/Resources/Private/Language/locallang.xlf:base_configuration;base';
 $timeType = \str_replace(
     'type,handling,state',
     $baseConfiguration,
@@ -210,7 +210,7 @@ $custom = [
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectMultipleSideBySide',
-                'foreign_table' => 'tx_calendarize_domain_model_configurationgroup',
+                'foreign_table' => 'tx_checkitcalendarize_domain_model_configurationgroup',
                 'minitems' => '1',
                 'size' => 5,
                 'maxitems' => '99',
