@@ -5,10 +5,10 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Controller;
+namespace Checkitsedo\Checkitcalendarize\Controller;
 
-use HDNET\Calendarize\Domain\Model\Index;
-use HDNET\Calendarize\Domain\Model\Request\AbstractBookingRequest;
+use Checkitsedo\Checkitcalendarize\Domain\Model\Index;
+use Checkitsedo\Checkitcalendarize\Domain\Model\Request\AbstractBookingRequest;
 
 /**
  * BookingController.
@@ -18,7 +18,7 @@ class BookingController extends AbstractController
     /**
      * Form action.
      *
-     * @param \HDNET\Calendarize\Domain\Model\Index $index
+     * @param \Checkitsedo\Checkitcalendarize\Domain\Model\Index $index
      */
     public function bookingAction(Index $index = null)
     {
@@ -33,9 +33,9 @@ class BookingController extends AbstractController
      * Send action.
      *
      * @param Index                                                          $index
-     * @param \HDNET\Calendarize\Domain\Model\Request\AbstractBookingRequest $request
+     * @param \Checkitsedo\Checkitcalendarize\Domain\Model\Request\AbstractBookingRequest $request
      *
-     * @validate $request \HDNET\Calendarize\Validation\Validator\BookingRequestValidator
+     * @validate $request \Checkitsedo\Checkitcalendarize\Validation\Validator\BookingRequestValidator
      */
     public function sendAction(Index $index, AbstractBookingRequest $request)
     {
