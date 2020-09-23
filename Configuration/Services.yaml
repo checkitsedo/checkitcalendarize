@@ -1,0 +1,14 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  HDNET\Calendarize\:
+    resource: '../Classes/*'
+
+  HDNET\Calendarize\Listener\CalendarizeField:
+    tags:
+      - name: event.listener
+        identifier: 'calendarizeField'
+        event: TYPO3\CMS\Core\Database\Event\AlterTableDefinitionStatementsEvent
