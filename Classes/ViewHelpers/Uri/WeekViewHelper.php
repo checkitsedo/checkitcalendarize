@@ -5,12 +5,12 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\ViewHelpers\Uri;
+namespace Checkitsedo\Checkitcalendarize\ViewHelpers\Uri;
 
 /**
  * Uri to the week.
  */
-class WeekViewHelper extends \HDNET\Calendarize\ViewHelpers\Link\WeekViewHelper
+class WeekViewHelper extends \Checkitsedo\Checkitcalendarize\ViewHelpers\Link\WeekViewHelper
 {
     /**
      * Render the uri to the given week.
