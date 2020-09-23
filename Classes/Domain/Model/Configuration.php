@@ -5,12 +5,12 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Domain\Model;
+namespace Checkitsedo\Checkitcalendarize\Domain\Model;
 
 use HDNET\Autoloader\Annotation\DatabaseField;
 use HDNET\Autoloader\Annotation\DatabaseTable;
 use HDNET\Autoloader\Annotation\SmartExclude;
-use HDNET\Calendarize\Utility\DateTimeUtility;
+use Checkitsedo\Checkitcalendarize\Utility\DateTimeUtility;
 
 /**
  * Configuration for time options.
@@ -111,7 +111,7 @@ class Configuration extends AbstractModel implements ConfigurationInterface
     /**
      * Groups.
      *
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\HDNET\Calendarize\Domain\Model\ConfigurationGroup>
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Checkitsedo\Checkitcalendarize\Domain\Model\ConfigurationGroup>
      * @DatabaseField("\TYPO3\CMS\Extbase\Persistence\ObjectStorage")
      * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
      */
