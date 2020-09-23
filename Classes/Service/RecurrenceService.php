@@ -5,9 +5,9 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Service;
+namespace Checkitsedo\Checkitcalendarize\Service;
 
-use HDNET\Calendarize\Domain\Model\ConfigurationInterface;
+use Checkitsedo\Checkitcalendarize\Domain\Model\ConfigurationInterface;
 
 /**
  * Recurrence service.
