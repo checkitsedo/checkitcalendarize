@@ -5,9 +5,9 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\ViewHelpers\Link;
+namespace Checkitsedo\Checkitcalendarize\ViewHelpers\Link;
 
-use HDNET\Calendarize\Utility\DateTimeUtility;
+use Checkitsedo\Checkitcalendarize\Utility\DateTimeUtility;
 
 /**
  * Link to the quarter.
@@ -38,7 +38,7 @@ class QuarterViewHelper extends AbstractLinkViewHelper
         }
         $date = $this->arguments['date'];
         $additionalParams = [
-            'tx_calendarize_calendar' => [
+            'tx_checkitcalendarize_calendar' => [
                 'year' => $date->format('Y'),
                 'quarter' => DateTimeUtility::getQuartar($date),
             ],
