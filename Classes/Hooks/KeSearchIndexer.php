@@ -5,14 +5,14 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Hooks;
+namespace Checkitsedo\Checkitcalendarize\Hooks;
 
 use HDNET\Autoloader\Annotation\Hook;
 use HDNET\Autoloader\Utility\IconUtility;
-use HDNET\Calendarize\Domain\Model\Index;
-use HDNET\Calendarize\Domain\Model\Request\OptionRequest;
-use HDNET\Calendarize\Domain\Repository\IndexRepository;
-use HDNET\Calendarize\Features\KeSearchIndexInterface;
+use Checkitsedo\Checkitcalendarize\Domain\Model\Index;
+use Checkitsedo\Checkitcalendarize\Domain\Model\Request\OptionRequest;
+use Checkitsedo\Checkitcalendarize\Domain\Repository\IndexRepository;
+use Checkitsedo\Checkitcalendarize\Features\KeSearchIndexInterface;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Object\ObjectManager;
 
@@ -32,9 +32,9 @@ class KeSearchIndexer extends AbstractHook
     public function registerIndexerConfiguration(&$params, $pObj)
     {
         $newArray = [
-            'Calendarize Indexer',
-            'calendarize',
-            IconUtility::getByExtensionKey('calendarize'),
+            'Checkit Calendarize Indexer',
+            'checkitcalendarize',
+            IconUtility::getByExtensionKey('checkitcalendarize'),
         ];
         $params['items'][] = $newArray;
     }
@@ -49,7 +49,7 @@ class KeSearchIndexer extends AbstractHook
      */
     public function customIndexer(&$indexerConfig, &$indexerObject)
     {
-        if ('calendarize' !== $indexerConfig['type']) {
+        if ('checkitcalendarize' !== $indexerConfig['type']) {
             return;
         }
 
@@ -84,11 +84,11 @@ class KeSearchIndexer extends AbstractHook
             $storeArguemnts = [
                 $indexerConfig['storagepid'],
                 $title,
-                'calendarize',
+                'checkitcalendarize',
                 $indexerConfig['targetpid'],
                 $fullContent,
                 $originalObject->getKeSearchTags($index),
-                "&tx_calendarize_calendar[index]={$index->getUid()}",
+                "&tx_checkitcalendarize_calendar[index]={$index->getUid()}",
                 $abstract,
                 $index->_getProperty('_languageUid'), // $index always has a "_languageUid" - if the $originalObject does not use translations, it is 0
                 $index->_hasProperty('starttime') ? $index->_getProperty('starttime') : 0,
