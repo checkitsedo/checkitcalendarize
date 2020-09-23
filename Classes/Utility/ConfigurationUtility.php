@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Utility;
+namespace Checkitsedo\Checkitcalendarize\Utility;
 
 use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
@@ -42,7 +42,7 @@ class ConfigurationUtility
     protected static function loadConfiguration()
     {
         if (null === self::$configuration) {
-            self::$configuration = (array)GeneralUtility::makeInstance(ExtensionConfiguration::class)->get('calendarize');
+            self::$configuration = (array)GeneralUtility::makeInstance(ExtensionConfiguration::class)->get('checkitcalendarize');
         }
     }
 }
