@@ -3,13 +3,13 @@ Documentation at: https://fluidtypo3.org/documentation/templating-manual/appendi
 
 Execute:
 export TYPO3_PATH=/path/to/installation/without/last/slash
-rm -rf $TYPO3_PATH/typo3conf/ext/calendarize/Resources/Private/Xmlns/Calendarize.xsd
-$TYPO3_PATH/typo3/cli_dispatch.phpsh extbase schema:generate HDNET.Calendarize > $TYPO3_PATH/typo3conf/ext/calendarize/Resources/Private/Xmlns/Calendarize.xsd
+rm -rf $TYPO3_PATH/typo3conf/ext/checkitcalendarize/Resources/Private/Xmlns/Calendarize.xsd
+$TYPO3_PATH/typo3/cli_dispatch.phpsh extbase schema:generate Checkitsedo.Checkitcalendarize > $TYPO3_PATH/typo3conf/ext/checkitcalendarize/Resources/Private/Xmlns/Calendarize.xsd
 
 Example in the Template:
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
 	 xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
-	 xmlns:c="http://typo3.org/ns/HDNET/Calendarize/ViewHelpers">
+	 xmlns:c="http://typo3.org/ns/Checkitsedo/Checkitcalendarize/ViewHelpers">
 
 	<f:layout name="XXXX" />
 
