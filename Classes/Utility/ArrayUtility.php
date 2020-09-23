@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Utility;
+namespace Checkitsedo\Checkitcalendarize\Utility;
 
 use TYPO3\CMS\Core\Utility\MathUtility;
 
