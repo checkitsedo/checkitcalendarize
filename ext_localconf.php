@@ -7,36 +7,36 @@ if (!\defined('TYPO3_MODE')) {
     die('Access denied.');
 }
 
-\HDNET\Autoloader\Loader::extLocalconf('HDNET', 'calendarize', \HDNET\Calendarize\Register::getDefaultAutoloader());
-\HDNET\Calendarize\Register::extLocalconf(\HDNET\Calendarize\Register::getGroupCalendarizeConfiguration());
+\HDNET\Autoloader\Loader::extLocalconf('Checkitsedo', 'checkitcalendarize', \Checkitsedo\Checkitcalendarize\Register::getDefaultAutoloader());
+\Checkitsedo\Checkitcalendarize\Register::extLocalconf(\Checkitsedo\Checkitcalendarize\Register::getGroupCalendarizeConfiguration());
 
-if (!(bool) \HDNET\Calendarize\Utility\ConfigurationUtility::get('disableDefaultEvent')) {
-    \HDNET\Calendarize\Register::extLocalconf(\HDNET\Calendarize\Register::getDefaultCalendarizeConfiguration());
+if (!(bool) \Checkitsedo\Checkitcalendarize\Utility\ConfigurationUtility::get('disableDefaultEvent')) {
+    \Checkitsedo\Checkitcalendarize\Register::extLocalconf(\Checkitsedo\Checkitcalendarize\Register::getDefaultCalendarizeConfiguration());
     /** @var \TYPO3\CMS\Extbase\SignalSlot\Dispatcher $signalSlotDispatcher */
     $signalSlotDispatcher = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Extbase\SignalSlot\Dispatcher::class);
     $signalSlotDispatcher->connect(
-        \HDNET\Calendarize\Command\ImportCommandController::class,
+        \Checkitsedo\Checkitcalendarize\Command\ImportCommandController::class,
         'importCommand',
-        \HDNET\Calendarize\Slots\EventImport::class,
+        \Checkitsedo\Checkitcalendarize\Slots\EventImport::class,
         'importCommand'
     );
 
     $signalSlotDispatcher->connect(
-        \HDNET\Calendarize\Controller\BookingController::class,
+       \Checkitsedo\Checkitcalendarize\Controller\BookingController::class,
         'bookingAction',
-        \HDNET\Calendarize\Slots\BookingCountries::class,
+        \Checkitsedo\Checkitcalendarize\Slots\BookingCountries::class,
         'bookingSlot'
     );
     $signalSlotDispatcher->connect(
-        \HDNET\Calendarize\Controller\BookingController::class,
+        \Checkitsedo\Checkitcalendarize\Controller\BookingController::class,
         'sendAction',
-        \HDNET\Calendarize\Slots\BookingCountries::class,
+        \Checkitsedo\Checkitcalendarize\Slots\BookingCountries::class,
         'sendSlot'
     );
 }
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-    'HDNET.calendarize',
+    'Checkitsedo.checkitcalendarize',
     'Calendar',
     [
         'Calendar' => 'list,past,latest,year,quater,month,week,day,detail,search,result,single,shortcut',
@@ -48,13 +48,13 @@ if (!(bool) \HDNET\Calendarize\Utility\ConfigurationUtility::get('disableDefault
     ]
 );
 
-$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update'][\HDNET\Calendarize\Updates\CalMigrationUpdate::class] = \HDNET\Calendarize\Updates\CalMigrationUpdate::class;
-$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update'][\HDNET\Calendarize\Updates\NewIncludeExcludeStructureUpdate::class] = \HDNET\Calendarize\Updates\NewIncludeExcludeStructureUpdate::class;
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update'][\Checkitsedo\Checkitcalendarize\Updates\CalMigrationUpdate::class] = \Checkitsedo\Checkitcalendarize\Updates\CalMigrationUpdate::class;
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update'][\Checkitsedo\Checkitcalendarize\Updates\NewIncludeExcludeStructureUpdate::class] = \Checkitsedo\Checkitcalendarize\Updates\NewIncludeExcludeStructureUpdate::class;
 
-$GLOBALS['TYPO3_CONF_VARS']['FE']['typolinkBuilder']['record'] = \HDNET\Calendarize\Typolink\DatabaseRecordLinkBuilder::class;
+$GLOBALS['TYPO3_CONF_VARS']['FE']['typolinkBuilder']['record'] = \Checkitsedo\Checkitcalendarize\Typolink\DatabaseRecordLinkBuilder::class;
 
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:calendarize/Configuration/TsConfig/ContentElementWizard.txt">');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:checkitcalendarize/Configuration/TsConfig/ContentElementWizard.txt">');
 
 $icons = [
     'ext-calendarize-wizard-icon' => 'Resources/Public/Icons/Extension.svg',
@@ -64,16 +64,16 @@ foreach ($icons as $identifier => $path) {
     $iconRegistry->registerIcon(
         $identifier,
         \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-        ['source' => 'EXT:calendarize/' . $path]
+        ['source' => 'EXT:checkitcalendarize/' . $path]
     );
 }
 
 if (class_exists(\TYPO3\CMS\Core\Routing\Aspect\PersistedPatternMapper::class)) {
-    $GLOBALS['TYPO3_CONF_VARS']['SYS']['routing']['aspects']['EventMapper'] = \HDNET\Calendarize\Routing\Aspect\EventMapper::class;
+    $GLOBALS['TYPO3_CONF_VARS']['SYS']['routing']['aspects']['EventMapper'] = \Checkitsedo\Checkitcalendarize\Routing\Aspect\EventMapper::class;
 }
 
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['formEngine']['nodeRegistry'][1591803668] = [
     'nodeName' => 'calendarizeInfoElement',
     'priority' => 40,
-    'class' => \HDNET\Calendarize\Form\Element\CalendarizeInfoElement::class,
+    'class' => \Checkitsedo\Checkitcalendarize\Form\Element\CalendarizeInfoElement::class,
 ];
