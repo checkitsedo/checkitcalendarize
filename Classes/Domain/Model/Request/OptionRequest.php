@@ -6,9 +6,9 @@
 
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Domain\Model\Request;
+namespace Checkitsedo\Checkitcalendarize\Domain\Model\Request;
 
-use HDNET\Calendarize\Domain\Model\AbstractModel;
+use Checkitsedo\Checkitcalendarize\Domain\Model\AbstractModel;
 
 /**
  * OptionRequest.
