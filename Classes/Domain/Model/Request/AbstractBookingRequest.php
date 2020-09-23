@@ -5,9 +5,9 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Domain\Model\Request;
+namespace Checkitsedo\Checkitcalendarize\Domain\Model\Request;
 
-use HDNET\Calendarize\Domain\Model\AbstractModel;
+use Checkitsedo\Checkitcalendarize\Domain\Model\AbstractModel;
 
 /**
  * AbstractBookingRequest.
@@ -17,14 +17,14 @@ abstract class AbstractBookingRequest extends AbstractModel
     /**
      * Index.
      *
-     * @var \HDNET\Calendarize\Domain\Model\Index
+     * @var \Checkitsedo\Checkitcalendarize\Domain\Model\Index
      */
     protected $index;
 
     /**
      * Get index.
      *
-     * @return \HDNET\Calendarize\Domain\Model\Index
+     * @return \Checkitsedo\Checkitcalendarize\Domain\Model\Index
      */
     public function getIndex()
     {
@@ -34,7 +34,7 @@ abstract class AbstractBookingRequest extends AbstractModel
     /**
      * Set index.
      *
-     * @param \HDNET\Calendarize\Domain\Model\Index $index
+     * @param \Checkitsedo\Checkitcalendarize\Domain\Model\Index $index
      */
     public function setIndex($index)
     {
