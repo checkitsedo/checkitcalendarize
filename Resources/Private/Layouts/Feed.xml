@@ -7,7 +7,7 @@
 		<language>{settings.feed.language}</language>
 		<pubDate><f:format.date format="r" date="now" /></pubDate>
 		<lastBuildDate><f:format.date format="r" date="now" /></lastBuildDate>
-		<generator>TYPO3 EXT:calendarize</generator>
+		<generator>TYPO3 EXT:checkitcalendarize</generator>
 		<f:render section="items" />
 	</channel>
 </rss>
