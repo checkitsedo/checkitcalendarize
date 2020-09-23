@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\ViewHelpers;
+namespace Checkitsedo\Checkitcalendarize\ViewHelpers;
 
 use TYPO3\CMS\Backend\Configuration\TranslationConfigurationProvider;
 use TYPO3\CMS\Core\Imaging\Icon;
