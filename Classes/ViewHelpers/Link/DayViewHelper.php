@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\ViewHelpers\Link;
+namespace Checkitsedo\Checkitcalendarize\ViewHelpers\Link;
 
 /**
  * Link to the day.
@@ -36,7 +36,7 @@ class DayViewHelper extends AbstractLinkViewHelper
         }
         $date = $this->arguments['date'];
         $additionalParams = [
-            'tx_calendarize_calendar' => [
+            'tx_checkitcalendarize_calendar' => [
                 'year' => $date->format('Y'),
                 'month' => $date->format('n'),
                 'day' => $date->format('j'),
