@@ -5,10 +5,10 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Property\TypeConverter;
+namespace Checkitsedo\Checkitcalendarize\Property\TypeConverter;
 
-use HDNET\Calendarize\Domain\Model\Request\DefaultBookingRequest;
-use HDNET\Calendarize\Register;
+use Checkitsedo\Checkitcalendarize\Domain\Model\Request\DefaultBookingRequest;
+use Checkitsedo\Checkitcalendarize\Register;
 use TYPO3\CMS\Extbase\Property\PropertyMappingConfigurationInterface;
 use TYPO3\CMS\Extbase\Property\TypeConverter\AbstractTypeConverter;
 use TYPO3\CMS\Extbase\Reflection\ObjectAccess;
@@ -30,7 +30,7 @@ class AbstractBookingRequest extends AbstractTypeConverter
      *
      * @var string
      */
-    protected $targetType = \HDNET\Calendarize\Domain\Model\Request\AbstractBookingRequest::class;
+    protected $targetType = \Checkitsedo\Checkitcalendarize\Domain\Model\Request\AbstractBookingRequest::class;
 
     /**
      * Priority.
@@ -95,7 +95,7 @@ class AbstractBookingRequest extends AbstractTypeConverter
     /**
      * Get the right request model.
      *
-     * @return \HDNET\Calendarize\Domain\Model\Request\AbstractBookingRequest
+     * @return \Checkitsedo\Checkitcalendarize\Domain\Model\Request\AbstractBookingRequest
      */
     protected function getBookingRequestModel()
     {
