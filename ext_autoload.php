@@ -1,6 +1,6 @@
 <?php
 
-$extensionPath = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath('calendarize');
+$extensionPath = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath('checkitcalendarize');
 
 $autoloadClasses = [
     'JMBTechnologyLimited\\ICalDissect\\ICalEvent' => $extensionPath . 'Resources/Private/Php/ICalDissect/src/JMBTechnologyLimited/ICalDissect/ICalEvent.php',
