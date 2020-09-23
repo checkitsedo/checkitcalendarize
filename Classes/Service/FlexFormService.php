@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Service;
+namespace Checkitsedo\Checkitcalendarize\Service;
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
