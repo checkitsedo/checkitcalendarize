@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize\Service;
+namespace Checkitsedo\Checkitcalendarize\Service;
 
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
@@ -22,7 +22,7 @@ class BreadcrumbService extends AbstractService
      */
     public function generate(string $content, array $configuration)
     {
-        $arguments = GeneralUtility::_GET('tx_calendarize_calendar');
+        $arguments = GeneralUtility::_GET('tx_checkitcalendarize_calendar');
         $indexUid = isset($arguments['index']) ? (int)$arguments['index'] : 0;
         if (0 === $indexUid) {
             return $content;
@@ -41,7 +41,7 @@ class BreadcrumbService extends AbstractService
         } else {
             $linkConfiguration = [
                 'parameter' => $GLOBALS['TSFE']->id,
-                'additionalParams' => '&tx_calendarize_calendar[index]=' . $indexUid,
+                'additionalParams' => '&tx_checkitcalendarize_calendar[index]=' . $indexUid,
             ];
             $content = $contentObjectRenderer->typoLink($event['title'], $linkConfiguration);
         }
@@ -66,7 +66,7 @@ class BreadcrumbService extends AbstractService
      */
     protected function getIndex($uid)
     {
-        return $this->fetchRecordByUid('tx_calendarize_domain_model_index', $uid);
+        return $this->fetchRecordByUid('tx_checkitcalendarize_domain_model_index', $uid);
     }
 
     /**
