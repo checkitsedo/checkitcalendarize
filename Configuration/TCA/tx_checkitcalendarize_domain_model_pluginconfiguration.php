@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use HDNET\Autoloader\Utility\ArrayUtility;
 use HDNET\Autoloader\Utility\ModelUtility;
-use HDNET\Calendarize\Domain\Model\PluginConfiguration;
+use Checkitsedo\Checkitcalendarize\Domain\Model\PluginConfiguration;
 
 $base = ModelUtility::getTcaInformation(PluginConfiguration::class);
 
@@ -41,7 +41,7 @@ $custom = [
                 'type' => 'select',
                 'renderType' => 'selectCheckBox',
                 'renderMode' => 'checkbox',
-                'itemsProcFunc' => 'HDNET\Calendarize\Service\PluginConfigurationService->addConfig',
+                'itemsProcFunc' => 'Checkitsedo\Checkitcalendarize\Service\PluginConfigurationService->addConfig',
                 'minitems' => '1',
                 'maxitems' => '99',
             ],
@@ -61,13 +61,13 @@ $custom = [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'items' => [
-                    ['LLL:EXT:calendarize/Resources/Private/Language/locallang.xlf:inherit', ''],
-                    ['LLL:EXT:calendarize/Resources/Private/Language/locallang.xlf:recursive.I.0', '0'],
-                    ['LLL:EXT:calendarize/Resources/Private/Language/locallang.xlf:recursive.I.1', '1'],
-                    ['LLL:EXT:calendarize/Resources/Private/Language/locallang.xlf:recursive.I.2', '2'],
-                    ['LLL:EXT:calendarize/Resources/Private/Language/locallang.xlf:recursive.I.3', '3'],
-                    ['LLL:EXT:calendarize/Resources/Private/Language/locallang.xlf:recursive.I.4', '4'],
-                    ['LLL:EXT:calendarize/Resources/Private/Language/locallang.xlf:recursive.I.5', '250'],
+                    ['LLL:EXT:checkitcalendarize/Resources/Private/Language/locallang.xlf:inherit', ''],
+                    ['LLL:EXT:checkitcalendarize/Resources/Private/Language/locallang.xlf:recursive.I.0', '0'],
+                    ['LLL:EXT:checkitcalendarize/Resources/Private/Language/locallang.xlf:recursive.I.1', '1'],
+                    ['LLL:EXT:checkitcalendarize/Resources/Private/Language/locallang.xlf:recursive.I.2', '2'],
+                    ['LLL:EXT:checkitcalendarize/Resources/Private/Language/locallang.xlf:recursive.I.3', '3'],
+                    ['LLL:EXT:checkitcalendarize/Resources/Private/Language/locallang.xlf:recursive.I.4', '4'],
+                    ['LLL:EXT:checkitcalendarize/Resources/Private/Language/locallang.xlf:recursive.I.5', '250'],
                 ],
                 'size' => 1,
                 'minitems' => '1',
