@@ -1,4 +1,4 @@
-{namespace c=HDNET\Calendarize\ViewHelpers}
+{namespace c=Checkitsedo\Checkitcalendarize\ViewHelpers}
 
 <f:alias map="{event: index.originalObject}">
 	<h1>
@@ -22,11 +22,11 @@
 
 	<dl class="dl-horizontal meta">
 		<f:if condition="{event.location}">
-			<dt><f:translate key="tx_calendarize_domain_model_event.location" />:</dt>
+			<dt><f:translate key="tx_checkitcalendarize_domain_model_event.location" />:</dt>
 			<dd>{event.location}</dd>
 		</f:if>
 		<f:if condition="{event.organizer}">
-			<dt><f:translate key="tx_calendarize_domain_model_event.organizer" />:</dt>
+			<dt><f:translate key="tx_checkitcalendarize_domain_model_event.organizer" />:</dt>
 			<dd>{event.organizer}</dd>
 		</f:if>
 	</dl>
