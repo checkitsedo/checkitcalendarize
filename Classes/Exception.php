@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace HDNET\Calendarize;
+namespace Checkitsedo\Checkitcalendarize;
 
 /**
  * Calendarize logical exception.
